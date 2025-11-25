@@ -8,6 +8,7 @@
 .vision-mission-values .vision,
 .vision-mission-values .mission,
 .vision-mission-values .values {
+    margin-top: -30px;
     display: flex;
     text-align: left;
     align-items: center;
@@ -85,7 +86,7 @@
 
 /* ////////////////// STORY ////////////////// */
 .story .row  {
-    margin-top: 80px;
+    margin-top: 70px;
     margin-bottom: 80px;
     display: flex;
     flex-direction: row;
@@ -119,7 +120,7 @@
     border-radius: 50%;
     z-index: 0;
     left: 380px;
-    bottom: -265px;
+    bottom: -180px;
 }
 .story .column-box {
     display: flex;

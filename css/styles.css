@@ -8,7 +8,6 @@
 @import url("components/hero.css");
 @import url("components/subtext.css");
 @import url("components/graphic.css");
-@import url("components/testimonials.css");
 @import url("components/newsletter.css");
 @import url("components/social.css");
 @import url("components/footer.css");
@@ -25,8 +24,6 @@
 @import url("pages/home.css");
 
 /* APP */
-@import url("components/feature-slider.css");
-@import url("components/problems-solutions.css");
 @import url("pages/app.css");
 
 /* FOODX100 & MY NEIGHBOURHOOD & MY GROUPS & RECIPES & COOKING HACKS */

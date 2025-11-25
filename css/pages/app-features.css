@@ -1,35 +1,20 @@
-.main-text-foodx100 {
-    margin-bottom: 50px;
-}
-
-.main-text-foodx100 .container .find-better-food-fast h2 {
-    font-family: "Inter", sans-serif;
-    font-size: 32px;
-    color: #004000
-}
-
-.main-text-foodx100 .container .find-better-food-fast p {
-    font-family: "Work Sans", sans-serif;
-    font-size: 20px;
-    color: #004000;
-    padding-bottom: 20px;
-}
-
-.main-text-foodx100 .container .foodx100-database {
-    display: flex;
-    border-radius: 25px;
-    align-items: center;        
-    justify-content: center;
+.foodx100-database {
     height: 600px;
-} 
-
-.main-text-foodx100 .foodx100-database {
-    font-family: "Work Sans", sans-serif;
-    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main-text-foodx100 h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
     color: #004000;
 }
-
-.main-text-foodx100 .orange-text {
-    color: #FFB300;
-    font-weight: bold;
+.main-text-foodx100 p {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #004000;
 }

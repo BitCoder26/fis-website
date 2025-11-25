@@ -1,9 +1,15 @@
 .hero-section {
     background-color: #004000;
     overflow: visible;
-    height: 110px; 
+    height: 80px; 
     align-items: center;
     margin-bottom: 50px;
+}
+.hero-section-app {
+    background-color: #004000;
+    overflow: visible;
+    height: 80px; 
+    align-items: center;
 }
 .hero-content {
     display: flex;
@@ -19,21 +25,16 @@
     margin: 0;
     line-height: 0.9;
 }
-/* .hero-left .small-title {
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 30px;
-} */
 .hero-left .big-title {
     color: white;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 900;
     font-family: "Inter", sans-serif;
     margin-bottom: 10px;
-    margin-top: 35px;
+    margin-top: 20px;
 }
 .hero-right {
+    margin-top: 2px;
     margin-bottom: 10px;
     text-align: right;
     max-width: 600px;
@@ -41,17 +42,17 @@
     gap: 15px;
     align-items: center;
     justify-content: space-between;
-    margin-top: 15px;
 }
 .hero-right img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     color: white;
 }
 .hero-right p {
     color: white;
     font-family: "IBM Plex Mono", monospace;
     font-size: 18px;
+    font-weight: 100;
 }
 /* Home page only layout */
 .hero-right .hero-home {
