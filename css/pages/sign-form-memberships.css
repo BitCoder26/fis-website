@@ -9,7 +9,7 @@
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     */
-    background-color: yellow;
+    background-color: pink;
 }
 /* ------------------------------------------
 -------------- TAGLINE 
@@ -310,4 +310,19 @@ form textarea:focus,
     gap: 6px;
     width: auto;
     margin-top: 15px;
+}
+/* FORCE inline layout for radio labels */
+form label.radio-label {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    width: auto;
+}
+form label.checkbox-label {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    width: auto;
 }
