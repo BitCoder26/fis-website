@@ -290,6 +290,11 @@ form textarea:focus,
     outline: none;
 }
 
+/* Rules link */
+.form-wrapper a {
+    text-decoration: none;
+}
+
 /* to make radio buttons visible */
 .radio-label,
 .checkbox-label {
