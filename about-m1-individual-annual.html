@@ -165,15 +165,15 @@
 
                 <!-- preferred contact method -->
                 <label><b>Preferred Contact Method:</b></label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="contact-method" value="email" required>
                     Email
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="contact-method" value="post">
                     Post
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="contact-method" value="phone">
                     Phone
                 </label>
@@ -193,11 +193,11 @@
 
                 <!-- declaration 1 -->
                 <p><b>Do you have any current or past affiliations that may represent a potential conflict of interest?</b></p>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="conflict-of-interest" value="no" required>
                     No, I have no relevant affiliations.
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="conflict-of-interest" value="yes">
                     Yes (please provide details below):
                 </label>
@@ -210,7 +210,7 @@
                     “I confirm that the information provided is accurate and that I will notify the Society of
                     any future potential conflicts of interest should they arise.”
                 </p>
-                <label>
+                <label class="checkbox-label">
                     <input type="checkbox" name="conflict-agree" required>
                     <i>I agree to this declaration.</i>
                 </label>
@@ -224,10 +224,10 @@
                 <p>
                     “I support the aims of The Food Investors Society Ltd to create a healthier, fairer, and
                     more sustainable food system. I agree to uphold the Society's values and abide by its
-                    <u><b><a href="/assets/documents/rules.pdf" target="_blank" rel="noopener noreferrer">RULES</a></b></u> as a member.”
+                    <u><b><a href="assets/documents/rules.pdf" target="_blank" rel="noopener noreferrer">RULES</a></b></u> as a member.”
                     
                 </p>
-                <label>
+                <label class="checkbox-label">
                     <input type="checkbox" name="declaration-of-support" required>
                     <i>I agree to the above declaration.</i>
                 </label>
@@ -243,11 +243,11 @@
                     your membership and communicating Society updates. Your details will be stored
                     securely in line with UK GDPR.”
                 </p>
-                <label>
+                <label class="checkbox-label">
                     <input type="checkbox" name="consent-contact" required>
                     <i>I consent to The Food Investors Society contacting me with relevant news, updates, and invitations.</i>
                 </label>
-                <label>
+                <label class="checkbox-label">
                     <input type="checkbox" name="consent-withdrawal" required> 
                     <i>I understand I can withdraw my consent at any time.</i>
                 </label>
@@ -263,11 +263,11 @@
                     with the Financial Conduct Authority as a Community Benefit Society. Each member
                     holds one vote, regardless of the number of shares held.”
                 </p>
-                <label>
+                <label class="checkbox-label">
                     <input type="checkbox" name="understand-share-cost" required> 
                     <i>I understand that my membership includes a £1 share, which is non-withdrawable and non-transferable.</i>
                 </label>
-                <label>
+                <label class="checkbox-label">
                     <input type="checkbox" name="understand-16-over" required>
                     <i>I confirm I am aged 16 or over and eligible to hold membership in the Society.</i>
                 </label>
@@ -285,16 +285,16 @@
                 <p>
                     <b>Choose your annual contribution:</b>
                 </p>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="contribution-choice" value="1" required> 
                     £1 (minimum)
 
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="contribution-choice" value="12"> 
                     £12 (suggested)
                 </label>
-                <label class="contribution-other">
+                <label class="radio-label contribution-other">
                     <input type="radio" name="contribution-choice" value="other">
                     Other £
                     <input type="number" name="contribution-amount" min="1" class="other-input">
@@ -304,11 +304,11 @@
                 <p>
                     <b>Payment method:</b>
                 </p>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="payment-method" value="online" required> 
                     Online Payment (secure link)
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="payment-method" value="direct-debit"> 
                     Direct Debit
                 </label>
@@ -357,14 +357,14 @@
 
                 <!-- disability -->
                 <label><b>Do you consider yourself to have a disability or long-term health condition?</b></label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" value="yes" name="disability">
                     Yes
-                </label>
+                </label class="radio-label">
                 <label>
                     <input type="radio" value="no" name="disability">
                     No
-                </label>
+                </label class="radio-label">
                 <label>
                     <input type="radio" value="prefer-not-to-say" name="disability">
                     Prefer not to say

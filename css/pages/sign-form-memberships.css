@@ -291,17 +291,11 @@ form textarea:focus,
 }
 
 /* to make radio buttons visible */
-label:has(input[type="radio"]),
-label:has(input[type="checkbox"]) {
+.radio-label,
+.checkbox-label {
     display: inline-flex !important;
     align-items: center;
     gap: 6px;
     width: auto;
     margin-top: 15px;
-}
-label input[type="radio"],
-label input[type="checkbox"] {
-    margin-right: 6px;
-    position: static;
-    transform: none;
 }
