@@ -1,0 +1,46 @@
+# Diff Summary
+
+Date : 2025-11-25 22:37:22
+
+Directory /Users/admin/Documents/projects/food-investors-society/website-repo
+
+Total : 222 files,  -7957 codes, -485 comments, -98 blanks, all -8540 lines
+
+[Summary](results.md) / [Details](details.md) / Diff Summary / [Diff Details](diff-details.md)
+
+## Languages
+| language | files | code | comment | blank | total |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| Markdown | 1 | -2 | 0 | -1 | -3 |
+| HTML | 19 | -44 | -19 | -20 | -83 |
+| XML | 151 | -197 | 0 | -3 | -200 |
+| PostCSS | 40 | -665 | -298 | -15 | -978 |
+| JavaScript | 11 | -7,049 | -168 | -59 | -7,276 |
+
+## Directories
+| path | files | code | comment | blank | total |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| . | 222 | -7,957 | -485 | -98 | -8,540 |
+| . (Files) | 1 | -2 | 0 | -1 | -3 |
+| assets | 221 | -7,955 | -485 | -97 | -8,537 |
+| assets/icons | 221 | -7,955 | -485 | -97 | -8,537 |
+| assets/icons/about_us | 7 | -7 | 0 | 0 | -7 |
+| assets/icons/cook | 4 | -4 | 0 | 0 | -4 |
+| assets/icons/features_slider | 13 | -13 | 0 | -1 | -14 |
+| assets/icons/foodx-community | 12 | -12 | 0 | 0 | -12 |
+| assets/icons/foodx100 | 1 | -1 | 0 | 0 | -1 |
+| assets/icons/home | 41 | -87 | 0 | -2 | -89 |
+| assets/icons/logo | 6 | -6 | 0 | 0 | -6 |
+| assets/icons/memberships | 21 | -21 | 0 | 0 | -21 |
+| assets/icons/memberships (Files) | 9 | -9 | 0 | 0 | -9 |
+| assets/icons/memberships/white | 12 | -12 | 0 | 0 | -12 |
+| assets/icons/other | 79 | -7,767 | -485 | -94 | -8,346 |
+| assets/icons/other (Files) | 9 | -9 | 0 | 0 | -9 |
+| assets/icons/other/ight arr - 500 × 500px_files | 70 | -7,758 | -485 | -94 | -8,337 |
+| assets/icons/problems_solutions | 10 | -10 | 0 | 0 | -10 |
+| assets/icons/social | 8 | -8 | 0 | 0 | -8 |
+| assets/icons/the_app | 19 | -19 | 0 | 0 | -19 |
+| assets/icons/the_app (Files) | 11 | -11 | 0 | 0 | -11 |
+| assets/icons/the_app/feature-slideshow | 8 | -8 | 0 | 0 | -8 |
+
+[Summary](results.md) / [Details](details.md) / Diff Summary / [Diff Details](diff-details.md)

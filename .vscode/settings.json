@@ -1,0 +1,13 @@
+{
+  "VSCodeCounter.include": [
+    "**/*.html",
+    "**/*.css",
+    "**/*.js"
+  ],
+  "VSCodeCounter.exclude": [
+    "**/assets/**",
+    "**/.git/**",
+    "**/.vscode/**",
+    "**/node_modules/**"
+  ]
+}
