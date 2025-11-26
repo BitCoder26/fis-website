@@ -9,7 +9,7 @@
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     */
-    background-color: pink;
+    background-color: orange;
 }
 /* ------------------------------------------
 -------------- TAGLINE 
@@ -153,13 +153,13 @@
 .form-wrapper span {
     font-weight: 100;
 }
-.form-wrapper label {
+/* .form-wrapper label {
     display: block;
     margin-top: 15px;
     font-size: 20px;
     font-weight: 100;
     color: #004000;
-}
+} */
 .form-wrapper b {
     font-weight: 900;
 }
