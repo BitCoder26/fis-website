@@ -166,18 +166,15 @@
 
                 <!-- preferred contact method -->
                 <label><b>Preferred Contact Method:</b></label>
-                <label>
-                    <input type="radio" name="contact-method" value="email" required>
-                    Email
-                </label>
-                <label>
-                    <input type="radio" name="contact-method" value="post">
-                    Post
-                </label>
-                <label>
-                    <input type="radio" name="contact-method" value="phone">
-                    Phone
-                </label>
+            
+                <input type="radio" name="contact-method" value="email" required>
+                <label for="contact-method">Email</label>
+                
+                <input type="radio" name="contact-method" value="post">
+                <label for="contact-method">Post</label>
+
+                <input type="radio" name="contact-method" value="phone">
+                <label for="contact-method">Phone</label>
 
                 <br><br>
 
@@ -295,11 +292,11 @@
                     <input type="radio" name="contribution-choice" value="12"> 
                     £12 (suggested)
                 </label>
-                <label class="contribution-other">
-                    <input type="radio" name="contribution-choice" value="other">
-                    Other £
-                    <input type="number" name="contribution-amount" min="1" class="other-input">
+                <label class="radio-label">
+                    <input type="radio" name="org-type" value="other">
+                    Other:
                 </label>
+                <input type="text" name="other-org-type" class="other-input">
 
                 <!-- payment method -->
                 <p>
