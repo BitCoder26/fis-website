@@ -518,7 +518,7 @@
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 /* Hide radio buttons */
-input[type="radio"] {
+.carousel-wrapper input[type="radio"] {
     display: none;
 }
 

@@ -5,7 +5,7 @@
     <title>Food Investor's Society</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <link rel="icon" href="assets/icons/logo/TheFIS-logo.png" type="image/x-icon">
+    <link rel="icon" href="assets/icons/logo/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/pages/sign-form-memberships.css">
 
@@ -38,7 +38,7 @@
                 <!-- <h1 class="small-title">ABOUT</h1> -->
                 <h1 class="big-title">Individual Annual</h1>
             </div>
-            <!-- Sticky note -->
+            <!-- Sticky note
             <div class="sticky-stack">
                 <div class="sticky-note note-top">
                     <p>
@@ -47,7 +47,7 @@
                         <br>Fix all radio choices buttons
                     </p>
                 </div>
-            </div>
+            </div> -->
 
             <div class="hero-right">
                 <p>
@@ -168,13 +168,17 @@
                 <p><b>Preferred Contact Method:</b></p>
             
                 <div>
-                    <input type="radio" value="email" />
+                    <input type="radio" id="contact-email" name="contact-method" value="email" required>
                     <label for="contact-email">Email</label>
+                </div>
 
-                    <input type="radio" value="post" />
+                <div>
+                    <input type="radio" id="contact-post" name="contact-method" value="post">
                     <label for="contact-post">Post</label>
+                </div>
 
-                    <input type="radio" value="phone" />
+                <div>
+                    <input type="radio" id="contact-phone" name="contact-method" value="phone">
                     <label for="contact-phone">Phone</label>
                 </div>
 
