@@ -13,7 +13,7 @@
 
 .newsletter-section a {
     display: block;
-    color: #FFB300;
+    color: #ffb300;
     text-decoration: none;
     font-family: "Work Sans", sans-serif;
     font-size: 16px;
@@ -21,7 +21,7 @@
 }
 
 .newsletter-section a:hover {
-    color: #73FF00;
+    color: #ffb300;
 }
 
 .newsletter-section *::selection {

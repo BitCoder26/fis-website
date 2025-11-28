@@ -1,11 +1,8 @@
-.foodx100-database {
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+/*
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@ ALL 3 PAGES SHARE THIS
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
 .main-text-foodx100 h2 {
     font-family: "Inter", sans-serif;
     font-weight: 900;
@@ -18,3 +15,212 @@
     font-size: 20px;
     color: #004000;
 }
+.foodx100-container .bold-text {
+    font-weight: 900;
+}
+.foodx100-faq p {
+    color: #ffb300;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+/* FAQ button */
+.open-faq-btn {
+    background-color: #004000;
+    border-radius: 50px;
+    padding: 15px 35px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    text-decoration: none;  
+    text-align: center; 
+    margin-top: 0px;
+}
+.open-faq-btn:hover {
+    background: #004000;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.buttons-row-foodx100 {
+    padding-top: 50px;
+    margin-bottom: -30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+/* foodXchange founder button */
+.become-founder-btn {
+    background-color: #004000;
+    border-radius: 50px;
+    padding: 15px 35px;
+    color: white !important;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    text-decoration: none;  
+    text-align: center; 
+    margin-top: 0px;
+}
+.become-founder-btn:hover {
+    background: #004000;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+/* Early access button */
+.early-access-btn {
+    background-color: #004000;
+    border-radius: 50px;
+    padding: 15px 35px;
+    color: white !important;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    text-decoration: none;  
+    text-align: center; 
+    margin-top: 0px;
+}
+.early-access-btn:hover {
+    background: #004000;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.floating-store:hover {
+    transform: scale(1.05);
+}
+
+/*
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@ FOODX100
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+.foodx100-database {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.foodx100-container .foodX100-features {
+    list-style: none;
+    padding-left: 0;
+}
+.foodX100-features img {
+    width: 15px;
+    height: 15px;
+}
+.foodx100-faq {
+    text-align: start;
+    margin-bottom: 50px;
+    text-decoration: none;
+}
+.foodx100-bigger-mission a {
+    text-decoration: none;
+    color: #ffb300;
+    margin-bottom: 80px;
+}
+.foodx100-bigger-mission p {
+    margin-bottom: 0px;
+}
+.foodx-community-map {
+    background-color: white;
+    border-radius: 25px;
+}
+
+
+/*
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@ FOODX MY COMMUNITY
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+.foodx-community-map {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.foodx-community-container .foodx-community-features {
+    list-style: none;
+    padding-left: 0;
+}
+.foodx-community-features img {
+    width: 15px;
+    height: 15px;
+}
+.foodx-community-faq {
+    text-align: start;
+    margin-bottom: 50px;
+    text-decoration: none;
+}
+.foodx-community-bigger-mission a {
+    text-decoration: none;
+    color: #ffb300;
+    margin-bottom: 80px;
+}
+.foodx-community-bigger-mission p {
+    margin-bottom: 0px;
+}
+.foodx100-bigger-mission {
+    margin-bottom: 70px;
+}
+.community-partners-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+.community-partners-card {
+    background: white;
+    border-radius: 25px;
+    padding: 15px 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+}
+.community-partners-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(0,0,0,0.35);
+}
+.community-partners-row a {
+    text-decoration: none;
+    width: 50%;
+}
+.community-partners-wrapper .community-partners-card h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: #004000;
+}
+.community-partners-wrapper {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+/*
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@ COOK
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+

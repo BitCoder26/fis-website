@@ -4,7 +4,6 @@
     padding-right: 80px;
     padding-left: 80px;
 }
-
 .social-icons {
     width: 100%;
     max-width: 1200px;
@@ -12,20 +11,22 @@
     align-items: center;
     gap: 10px;
 }
-
 .social-icons h2 {
     color: white;
-    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+}
+.social-icons p {
+    color: white;
+    margin-bottom: 20px;
     font-size: 16px;
     font-family: "Work Sans", sans-serif;
 }
-
 .social-icons-row {
     display: flex;
     align-items: center;
     gap: 3px;
 }
-
 /* Social icon base */
 .social-icons .icon {
     width: 30px;
@@ -34,16 +35,14 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-right: 6px;
+    margin-right: 8px;
     transition: 0.2s ease;
 }
-
 .icon.youtube {
     width: 35px;
     height: 35px;
     background-image: url("../../assets/icons/social/x_colour.svg");
 }
-
 .icon.x {
     width: 27px;
     height: 27px;
@@ -63,17 +62,29 @@
 .icon.x {
     background-image: url("../../assets/icons/social/x_colour.svg");
 }
+.icon.tiktok {
+    background-image: url("../../assets/icons/social/tiktok_red_border.svg");
+}
+.icon.linkedin {
+    background-image: url("../../assets/icons/social/linkedin_colour.svg");
+}
 
 /* Hover icons */
 .icon.facebook:hover {
-    background-image: url("../../assets/icons/social/facebook_green.svg");
+    background-image: url("../../assets/icons/social/facebook_orange.svg");
 }
 .icon.instagram:hover {
-    background-image: url("../../assets/icons/social/instagram_green.svg");
+    background-image: url("../../assets/icons/social/instagram_orange.svg");
 }
 .icon.x:hover {
-    background-image: url("../../assets/icons/social/x_green.svg");
+    background-image: url("../../assets/icons/social/x_orange.svg");
 }
 .icon.youtube:hover {
-    background-image: url("../../assets/icons/social/youtube_green.svg");
+    background-image: url("../../assets/icons/social/youtube_orange.svg");
+}
+.icon.tiktok:hover {
+    background-image: url("../../assets/icons/social/tiktok_orange.svg");
+}
+.icon.linkedin:hover {
+    background-image: url("../../assets/icons/social/linkedin_orange.svg");
 }

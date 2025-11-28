@@ -1,0 +1,74 @@
+Date : 2025-11-28 22:31:40
+Directory : /Users/admin/Documents/projects/food-investors-society/website-repo
+Total : 42 files,  254 codes, 183 comments, -17 blanks, all 420 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| PostCSS    |         11 |        260 |         62 |          2 |        324 |
+| JavaScript |          2 |         23 |          4 |          7 |         34 |
+| HTML       |         29 |        -29 |        117 |        -26 |         62 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                   |         42 |        254 |        183 |        -17 |        420 |
+| . (Files)                                                                                                           |         29 |        -29 |        117 |        -26 |         62 |
+| css                                                                                                                 |         11 |        260 |         62 |          2 |        324 |
+| css (Files)                                                                                                         |          1 |          0 |          0 |          1 |          1 |
+| css/components                                                                                                      |          3 |          8 |         16 |        -17 |          7 |
+| css/pages                                                                                                           |          7 |        252 |         46 |         18 |        316 |
+| js                                                                                                                  |          2 |         23 |          4 |          7 |         34 |
++---------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                            | language   | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/admin/Documents/projects/food-investors-society/website-repo/about-m1-individual-annual.html                 | HTML       |         -7 |          9 |          3 |          5 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/about-m2-individual-lifetime.html               | HTML       |         -7 |          9 |         -1 |          1 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/about-m3-volunteer.html                         | HTML       |         -6 |          9 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/about-m4-affiliate-partner.html                 | HTML       |         -6 |          9 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/about-m5-strategic-partner.html                 | HTML       |         -6 |          9 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/about-m6-community-food-partner-non-profit.html | HTML       |         -5 |          9 |         -1 |          3 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/about-m7-community-food-partner-for-profit.html | HTML       |         -5 |          9 |         -1 |          3 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/about-m8-share-owner.html                       | HTML       |         -9 |         12 |         -2 |          1 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/about-supporter.html                            | HTML       |         -7 |         10 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/about-us.html                                   | HTML       |        -14 |          2 |          1 |        -11 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/business.html                                   | HTML       |          3 |          0 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/contact-us.html                                 | HTML       |          3 |          0 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/cook-cooking-hacks.html                         | HTML       |          3 |          0 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/cook-recipes.html                               | HTML       |          3 |          0 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/cook.html                                       | HTML       |          3 |          0 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/cookies.html                                    | HTML       |          3 |          0 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/create-account.html                             | HTML       |        -47 |        -10 |         -5 |        -62 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/css/components/nav.css                          | PostCSS    |          6 |         -1 |         -9 |         -4 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/css/components/social.css                       | PostCSS    |         17 |          0 |         -6 |         11 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/css/components/subtext.css                      | PostCSS    |        -15 |         17 |         -2 |          0 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/css/pages/about-us.css                          | PostCSS    |        -80 |         -4 |          1 |        -83 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/css/pages/app-features.css                      | PostCSS    |        104 |         23 |          7 |        134 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/css/pages/app.css                               | PostCSS    |          0 |          0 |         -2 |         -2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/css/pages/faq.css                               | PostCSS    |         18 |          1 |          0 |         19 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/css/pages/home.css                              | PostCSS    |        279 |         33 |         11 |        323 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/css/pages/my-foodx-community.css                | PostCSS    |       -112 |        -12 |         -1 |       -125 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/css/pages/sign-form-memberships.css             | PostCSS    |         43 |          5 |          2 |         50 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/css/styles.css                                  | PostCSS    |          0 |          0 |          1 |          1 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/donation.html                                   | HTML       |          3 |          0 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/faq.html                                        | HTML       |         79 |         32 |          8 |        119 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/foodX100.html                                   | HTML       |         35 |         13 |          2 |         50 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/index.html                                      | HTML       |        171 |         28 |         12 |        211 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/join-us.html                                    | HTML       |          3 |          0 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/js/carousel_auto_scroll.js                      | JavaScript |          7 |          1 |          3 |         11 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/js/carousel_auto_scroll_home_page.js            | JavaScript |         16 |          3 |          4 |         23 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/log-in.html                                     | HTML       |        -52 |         -9 |         -5 |        -66 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/my-foodX-community-my-groups.html               | HTML       |        -93 |        -20 |        -11 |       -124 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/my-foodX-community-my-neighbourhood.html        | HTML       |          3 |          0 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/my-foodX-community.html                         | HTML       |        -47 |          5 |         -8 |        -50 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/privacy_policy.html                             | HTML       |          3 |          0 |         -1 |          2 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/sign-up-supporter.html                          | HTML       |        -33 |         -7 |         -4 |        -44 |
+| /Users/admin/Documents/projects/food-investors-society/website-repo/the-app.html                                    | HTML       |          0 |         -2 |          0 |         -2 |
+| Total                                                                                                               |            |        254 |        183 |        -17 |        420 |
++---------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

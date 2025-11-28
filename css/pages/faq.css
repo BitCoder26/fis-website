@@ -1,0 +1,19 @@
+/* FAQ */
+.faq-container {
+    background-color: white;
+    height: 500px;
+    width: 100%;
+    border-radius: 25px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 0 16px rgba(0,0,0,0.2);
+    margin-bottom: 50px;
+}
+.faq-box h2{
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-top: 200px;
+    color: #004000;
+}

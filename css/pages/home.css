@@ -31,14 +31,12 @@
 ---------------------------------------------*/
 .trade-eat-live {
     line-height: 1.2;
-    margin-bottom: 60px;
 }
 .trade-eat-live h2 {
     font-size: 30px;
     font-weight: 800;
     font-family: "Inter", sans-serif;
     color: #004000;
-    margin-bottom: 0px;
 }
 .trade-eat-live p {
     font-size: 20px;
@@ -54,147 +52,174 @@
 .welcome-text {
     font-weight: 600;
 }
-
-/* ------------------------------------------
---------- PHONE SCREEN + EXPLORE BUTTON 
----------------------------------------------*/
-/* LEFT */
-.get-the-app {
-    padding-left: 120px;
-}
-.get-the-app .row-inner {
-    display: flex;
-}
-.get-the-app .row-inner img {
-    width: 90px;
-    height: 90px;
-    color: #004000;
-    margin-right: 30px;
-}
-.phone-screen-box .row {
-    display: flex;
-    margin-bottom: 80px;
-}
-.phone-screen-box .left-phone-screen {
-    margin-top: 70px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    width: 530px;
-    height: 530px;
-    /* transform: rotate(4deg); */
-}
-/* phone shadow */
-.phone-shadow {
-    position: absolute;
-    bottom: -320px;
-    left: 350px;
-    transform: none;
-    width: 320px;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.285);
-    filter: blur(25px);
-    border-radius: 50%;
-    z-index: 1;
-}
-/* RIGHT */
-.phone-screen-box .row .right-column{
-    margin-top: 80px;
-    flex: 1;       
-}
-.phone-screen-box .row .right-column h1{
-    margin-top: 23px;
-    font-family: "Inter", sans-serif;
-    font-size: 35px;
-    font-weight: 800;
-    color: #FFB300;
-}
-.phone-screen-box .row .right-column h2{
-    font-family: "Inter", sans-serif;
-    font-size: 30px;
-    font-weight: 800;
-    margin-bottom: -20px;
-    margin-top: -50px;
-    color: #004000;
-}
-.phone-screen-box .row .right-column p{
-    font-family: "Work Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    color: #004000;
-    margin-bottom: 15px;
-}
-/* Button: Explore app */
-.explore-app {
-    margin-top: -10px;
-    margin-bottom: 35px;
-    display: flex;
-}
-.explore-app p {
-    font-family: "Work Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    color: #004000;
-    text-decoration: none;
-    justify-content: center;   
-}
-/* Download badges (diabled) */
-.download-row {
-    margin-top: -70px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-.app-store-badge {
-    width: 130px;
-    height: 130px;
-}
-.google-play-badge {
-    width: 145px;
-    height: 145px;
-}
-/* explore app button */
-.explore-btn {
-    background-color: #004000;
-    border-radius: 50px;
-    padding: 15px 35px;
-    color: white;
-    font-size: 25px;
-    cursor: pointer;
-    transition: 0.4s ease;
-    font-size: 20px;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 700;
-    text-decoration: none;  
-    text-align: center; 
-    margin-top: 0px;
-}
-.explore-btn:hover {
-    background: #004000;
-    color: white;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+.bold-text {
+    font-weight: 900;
 }
 
 /* ----------------------------------------
---------------- FOOD ANALYSIS
+--------------- CTA BUTTONS
 ------------------------------------------*/
-.food-analysis {
-    margin-top: 150px;
-    margin-bottom: 80px;
+.cta-container {
+    margin-top: 62px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cta-icon-box {
+    height: 70px;
+    align-items: center;
+}
+.cta-card img {
+    margin-top: 20px;
+    width: 90px;
+    height: 90px;
+}
+.cta-card .foodX100 {
+    width: 85px;
+    height: 85px;
+    padding-top: 2px;
+}
+.cta-card {
+    height: 150px;
+    width: 300px;
+    background-color: white;
+    border-radius: 25px;
+    padding: 38px 55px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+} 
+.cta-row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.cta-card h2 {
+    margin-top: 22px;
+    margin-bottom: -10px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    color: #004000;
+}
+.cta-card p {
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: #004000;
+}
+.cta-card:link {
+    text-decoration: none;
+}
+.cta-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(0,0,0,0.35);
+}
+
+/* ----------------------------------------
+----------- CHALLENGE + VIDEO
+------------------------------------------*/
+.challenge-box {
+    margin-top: 65px;
+    margin-bottom: 65px;   
+}
+.challenge-box h2 {
+    margin-left: 80px;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #004000;
+}
+.challenge-box p {
+    margin-left: 80px;
+    margin-bottom: 60px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: #004000;
+}
+.video-container {
+    background-color: #004000;
+    padding: 80px 80px;
+}
+.challenge-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: white;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
-    padding: 0px 0;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: #004000;
+    box-shadow: 0 0 20px rgba(0,0,0,0.35);
 }
-.analysis-wrapper {
+
+/* ----------------------------------------
+----------------- APP
+------------------------------------------*/
+.the-app-box {
+    margin-top: 65px;
+    margin-bottom: 0px;   
+}
+.the-app-box h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #004000;
+}
+.the-app-box p {
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: #004000;
+}
+.price-comparison-diagram,
+.meals-diagram,
+.recipes_hacks
+.community-diagram {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.graphic2, 
+.graphic3,
+.graphic4,
+.graphic5 {
+    height: 400px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.35);
+    width: 700px;
+    background-color: white;
+    font-weight: 100;
+    font-size: 20px;
+    color: #004000;
+}
+
+/* FOOD SCORING DIAGRAM */
+.scoring-wrapper {
     position: relative;
     width: 1000px;
     height: 400px; 
 }
-.food-analysis .food-analysis-box h1 {
-    font-family: "Inter", sans-serif;
+.food-scoring-box h1 {
+    font-family: "Work Sans", sans-serif;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 900;
     color: #004000;
-    margin-bottom: -20px;
 }
 .food-icon {
     position: absolute;
@@ -246,11 +271,242 @@
 .box15 { top: 82%; right: 76%; }
 .box16 { top: 93%; right: 72%; width: 175px}
 
+.food-scoring {
+    margin-top: -50px;
+}
+.graphic-wrapper {
+    padding-top: 20px;
+    padding-bottom: 70px;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.graphic {
+    display: flex;
+    height: 400px;
+    width: 900px;
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.35);
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: #004000;
+}
+
+/* ------------------------------------------
+------------- MY NEIGHBOURHOOD
+---------------------------------------------*/
+.map-feature {
+    margin-top: 50px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: row;
+}
+.row-inner {
+    display: flex;
+    flex-direction: row;
+}
+/* position wrapper */
+.neighbourhood-wrapper {
+    position: relative;
+    width: 900px;
+    height: 480px;
+    margin: 0 0 40px 0;
+    /* border: 2px solid red; */
+}
+/* map */
+.map-image {
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+/* bubbles */
+.map-bubble {
+    position: absolute;
+    background: white;
+    padding: 10px 18px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    font-weight: 600;
+    color: #004000;
+    width: fit-content;
+}
+/* left */
+.bubble-left-0 { top: 0%;  right: 61%; background-color: #ffb300; color: white }
+.bubble-left-1 { top: 9%;  right: 66%; background-color: white; color: #004000 }
+.bubble-left-2 { top: 18%; right: 70.5%; background-color: white; color: #004000 }
+.bubble-left-3 { top: 27%; right: 72.5%; background-color: white; color: #004000 }
+.bubble-left-4 { top: 36%; right: 74%; background-color: white; color: #004000 }
+.bubble-left-5 { top: 45%; right: 75%; background-color: white; color: #004000 }
+.bubble-left-6 { top: 54%; right: 75%; background-color: white; color: #004000 }
+.bubble-left-7 { top: 63%; right: 74%; background-color: white; color: #004000 }
+.bubble-left-8 { top: 72%; right: 72%; background-color: white; color: #004000 }
+/* right */
+.bubble-right-0 { top: 20%; left: 78%; background-color: #004000; color: white }
+.bubble-right-1 { top: 29%; left: 79.5%; background-color: white; color: #004000 }
+.bubble-right-2 { top: 38%; left: 80.5%; background-color: white; color: #004000 }
+.bubble-right-3 { top: 47%; left: 81%; background-color: white; color: #004000 }
+.bubble-right-4 { top: 56%; left: 80.5%; background-color: white; color: #004000 }
+.bubble-right-5 { top: 65%; left: 79%; background-color: white; color: #004000 }
+.bubble-right-6 { top: 74%; left: 76%; background-color: white; color: #004000 }
+.bubble-right-7 { top: 83%; left: 73%; background-color: white; color: #004000 }
+/* Button: Try my neighbourhood */
+.try-map {
+    margin-top: 0px;
+    margin-bottom: 45px;
+    display: flex;
+}
+.try-map-btn p {
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: #004000;
+    text-decoration: none;
+    justify-content: center;   
+}
+.try-map-btn {
+    background-color: #004000;
+    border-radius: 50px;
+    padding: 15px 35px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    text-decoration: none;  
+    text-align: center; 
+    margin-top: 20px;
+}
+.try-map-btn:hover {
+    background: #004000;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+/* ------------------------------------------
+--------- PHONE SCREEN + EXPLORE BUTTON 
+---------------------------------------------*/
+/* LEFT */
+.get-the-app {
+    margin-top: 50px;
+    background: linear-gradient(to right, #FFB300, #004000);
+    /* background-color: #004000; */
+    padding-left: 120px;
+}
+.get-the-app .icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    margin-right: 30px;
+    /* margin-bottom: 0px; */
+    box-shadow: 0 0 20px rgba(255,255,255,0.6);
+}
+.phone-screen-box .row {
+    display: flex;
+}
+.phone-screen-box .left-phone-screen {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 50px;
+    width: 470px;
+    height: 470px;
+}
+/* phone shadow */
+/* .phone-shadow {
+    position: absolute;
+    bottom: -1750px;
+    left: 350px;
+    transform: none;
+    width: 320px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.285);
+    filter: blur(25px);
+    border-radius: 50%;
+    z-index: 1;
+} */
+
+/* RIGHT */
+.phone-screen-box .row .right-column{
+    margin-top: 120px;
+    margin-bottom: 70px;
+    flex: 1;       
+}
+.phone-screen-box .row .right-column h2{
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 0px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+/* Button: Explore app */
+.discover-app {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    display: flex;
+}
+/* Download badges (diabled) */
+.download-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.app-store-badge {
+    width: 130px;
+    height: 130px;
+    transition: 0.3s ease-in-out;
+}
+.google-play-badge {
+    width: 145px;
+    height: 145px;
+    transition: 0.3s ease-in-out;
+}
+.app-store-badge:hover,
+.google-play-badge:hover {
+    transform: scale(1.05);
+}
+/* discover app button */
+.discover-btn {
+    background-color: #004000;
+    border-radius: 50px;
+    padding: 15px 35px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    text-decoration: none;  
+    text-align: center; 
+    margin-top: 0px;
+}
+.discover-btn:hover {
+    background: #004000;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
 /* ----------------------------------------
 --------------- APP FEATURES
 ------------------------------------------*/
 .app-features-try {
-    margin-bottom: 50px;
+    margin-bottom: 150px;
     margin-top: 150px;
 }
 .app-features-try .features-row h2{
@@ -270,7 +526,7 @@
     width: 50px;
     height: 50px;
     color: #004000;
-    margin-top: 90px;
+    margin-top: 50px;
 }
 .feature-item {
     display: flex;
@@ -322,8 +578,8 @@
 /* feature icon shadow */
 .feature-shadow {
     position: absolute;
-    bottom: -75px;
-    left: 50%;
+    bottom: 30px;
+    left: 6%;
     transform: translateX(-50%);
     width: 50px;
     height: 6px;
@@ -406,6 +662,72 @@
     color: #004000;
     box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
+
+/* ------------------------------------------
+----------- SUPPORTER CAROUSEL 
+---------------------------------------------*/
+.supporters {
+    background-color: #004000;
+    height: 170px;
+}
+.supporter-header-box h1 {
+    margin-top: 0;
+    margin-left: 80px;
+    margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 800;
+}
+.supporters-carousel {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    padding: 10px 80px;
+    overflow-x: auto;  
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.supporter-card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 12px 10px;
+    background-color: white;
+    width: auto;
+    height: 50px;
+    border-radius: 50px; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.supporter-card .supporter-logo {
+    background-color: #004000;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: "Work Sans", sans-serif;
+}
+.supporter-card h1 {
+    font-family: "Inter", sans-serif;
+    color: #004000;
+    font-size: 20px !important;
+    font-weight: 100 !important;
+    font-size: 20px;
+    font-weight: 800;
+    margin-right: 20px;
+}
+
+
 
 /* ----------------------------------------
 ----------------- TEXT RELATED 

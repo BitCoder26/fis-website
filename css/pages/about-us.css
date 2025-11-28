@@ -1,42 +1,50 @@
-/* /////// MISSION + VISION + VALUES /////// */
-.vision-mission-values .row {
+.page-wrapper h2 {
+    color: #004000;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+}
+.page-wrapper p, ul {
+    color: #004000;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.vision-mission .row {
+    margin: 50px 0;
     display: flex;
     justify-content: center;
     width: 100%;
     gap: 100px;
 }
-.vision-mission-values .vision,
-.vision-mission-values .mission,
-.vision-mission-values .values {
+.vision-mission .vision,
+.vision-mission .mission,
+.vision-mission .values {
     margin-top: -30px;
     display: flex;
     text-align: left;
     align-items: center;
     flex-direction: column;
-    width: 33.33%;
+    width: 50%;
     position: relative;
 }
-.vision-mission-values .title-row {
+.vision-mission .title-row {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 8px; 
     width: 100%;
 }
-.vision-mission-values .title-row h1 {
+.vision-mission .title-row h1 {
     margin-top: 35px;
 }
-.vision-mission-values .title-row img {
+.vision-mission .title-row img {
     margin-right: 10px;
     width: 50px;
     height: 50px;
 }
-.vision-mission-values .diamond {
-    margin-top: 10px;
-    width: 40px !important;
-    height: 40px !important;
-}
-.vision-mission-values h1 {
+.vision-mission h1 {
     font-family: "Work Sans", sans-serif;
     font-size: 30px;
     font-weight: 800;
@@ -44,7 +52,7 @@
     text-align: left;
     align-items: center;
 }
-.vision-mission-values p {
+.vision-mission p {
     margin-top: 30px;
     font-family: "Work Sans", sans-serif;
     font-size: 20px;
@@ -53,7 +61,7 @@
     text-align: left;
     align-items: center;
 }
-.vision-mission-values b {
+.vision-mission b {
     font-weight: 500;
 }
 /* icon shadow */
@@ -77,101 +85,68 @@
     left: 17px;
     bottom: 138px; 
 }
-.diamond-shadow {
-    width: 45px !important;
-    left: 21px;
-    bottom: 138px; 
-}
 
-
-/* ////////////////// STORY ////////////////// */
-.story .row  {
-    margin-top: 70px;
-    margin-bottom: 80px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+/* join button */
+.about-join-movement {
+    margin-top: 50px;
+    text-align: start;
+    margin-bottom: -120px;
+    text-decoration: none;
 }
-.story .image-box {
-    display: flex;
-    text-align: center;
-    background-color: white;
-    width: 50%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: #004000;
-    border-radius: 25px;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.join-movement-btn {
+    background-color: #004000;
+    border-radius: 50px;
+    padding: 15px 35px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.4s ease;
     font-size: 20px;
-    color: #004000;
-}
-/* image shadow */
-.image-shadow {
-    position: absolute;
-    transform: translateX(-50%);
-    width: 630px;
-    height: 70px;
-    background: rgba(0, 0, 0, 0.20);
-    filter: blur(30px);
-    border-radius: 50%;
-    z-index: 0;
-    left: 380px;
-    bottom: -180px;
-}
-.story .column-box {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 50%;
-    color: #004000;
-    margin-top: 20px;
-    margin-left: 70px;
-    margin-bottom: 20px;
-}
-.story .column-box h1 {
-    font-family: "Inter", sans-serif;
-    font-size: 30px;
-    font-weight: 900;
-}
-.story .column-box p {
     font-family: "Work Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    margin-top: 20px;
+    font-weight: 700;
+    text-decoration: none;  
+    text-align: center; 
+    margin-top: 0px;
 }
+.join-movement-btn:hover {
+    background: #004000;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
 
 /* //////////////// FOUNDERS //////////////// */
 .founders {
     margin-top: 180px;
+    padding: 50px 80px;
+    background-color: #004000;
 }
 .founders h1 {
     text-align: center;
     font-family: "Inter", sans-serif;
     font-size: 30px;
     font-weight: 900;
-    color: #004000;
+    color: white;
     margin-bottom: 40px;
 }
 .founders-row {
     display: flex;
-    gap: 80px;
+    gap: 32px;
     width: 100%;
 }
 .founder-card {
-    width: 33.33%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
+}
+.founder-card p {
     font-family: "Work Sans", sans-serif;
     font-size: 20px;
     font-weight: 100;
-    color: #004000;
-    position: relative;
+    color: white;
+
 }
 .profile-crop {
     margin-bottom: 20px;
@@ -188,78 +163,20 @@
     object-position: center;
     transform: scale(1.1);
     transform-origin: center center;
+    color: white !important;
 }
 .founders .profile-crop img {
     border-radius: 50%;
 }
-
-/* //////////////// DONATION //////////////// */
-.about-us-donation-section {
-    margin-top: 100px;
-    height: 350px;
-    line-height: 1.2;
-    padding-bottom: 60px;
-    padding-top: 60px;
-    background-color: #004000;
-    line-height: 1.2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.profile-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.1);
+    transform-origin: center center;
 }
-.about-us-donation-section h2 {
-    font-size: 35px;
-    font-weight: 800;
-    font-family: "Inter", sans-serif;
-    color: white;
-}
-.about-us-donation-section p {
-    font-size: 20px;
-    font-weight: 100;
-    font-family: "Work Sans", sans-serif;
-    color: white;
-}
-.card-content .donation-text{
-    justify-items: center;
-}
-.card-content .donation-text p {
-    text-align: left;
-}
-.about-us-donation-section .donation-text{
-    justify-items: center;
-}
-.about-us-donation-section .donation-text p{
-    text-align: left;
-}
-/* Button */
-.donation-button-box {
-    margin-top: 0px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.donation-button-box p {
-    font-family: "Work Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    color: #004000;
-    text-decoration: none;
-}
-.donation-btn {
-    display: inline-block;
-    background: #ffffff;
-    color: #004000;
-    padding: 18px 50px;
-    font-size: 20px;
-    font-weight: 700;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: 0.3s;
-    margin-top: 20px;
-}
-.donation-btn:hover {
-    background: #ffffff;
-    color: #004000;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+.profile-circle {
+    background-color: white !important;
+    color: white !important;
 }
