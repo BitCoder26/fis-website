@@ -116,6 +116,12 @@
     align-items: center;
     text-align: center;
 }
+.foodx100-database p {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #004000;
+}
 .foodx100-container .foodX100-features {
     list-style: none;
     padding-left: 0;
@@ -130,7 +136,7 @@
     text-decoration: none;
 }
 .foodx100-bigger-mission {
-    margin-top: -30px;
+    margin-top: 30px;
 }
 .foodx100-bigger-mission a {
     text-decoration: none;
@@ -169,6 +175,13 @@
     align-items: center;
     text-align: center;
 }
+.foodx-community-map p {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #004000;
+
+}
 .foodx-community-container .foodx-community-features {
     list-style: none;
     padding-left: 0;
@@ -198,11 +211,12 @@
     flex-direction: row;
     gap: 20px;
     width: 100%;
+    margin-bottom: 50px;
 }
 .community-partners-card {
     background: #e7ebe8;
     border-radius: 25px;
-    padding: 25px 40px;
+    padding: 25px 60px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
     transition: 0.4s ease;
 }
@@ -214,11 +228,40 @@
     text-decoration: none;
     width: 50%;
 }
+.first-text-card-community-partners {
+    text-align: left;
+    display: flex;
+    justify-content: left;
+}
+.bullets-card-community-partners {
+    display: flex;
+    justify-content: left;
+}
+.bullets-card-community-partners ul {
+    text-align: left;
+    padding-left: 20px;
+    margin: 0;
+}
+.last-text-card-community-partners {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+.card-header-wrapper {
+    text-align: left;
+}
 .community-partners-wrapper .community-partners-card h2 {
     font-family: "Inter", sans-serif;
     font-weight: 900;
     font-size: 30px;
     color: #004000;
+}
+.community-partners-wrapper .community-partners-card h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: #004000;
+    margin-top: -20px;
 }
 .community-partners-wrapper {
     margin-bottom: 50px;

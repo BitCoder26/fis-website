@@ -2,7 +2,7 @@
 ------------ TEXT OVER ANIMATION
 ---------------------------------------------*/
 .animation-text {
-    padding-top: 40px;
+    padding-top: 20px;
     color: #004000;
     margin-left: 80px;
     opacity: 0;
@@ -20,10 +20,17 @@
     color: #ffb300;
 }
 .animation-text h3 {
-    margin-top: -10px;
+    margin-top: -20px;
     font-family: "Inter", sans-serif;
     font-size: 30px;
     font-weight: 100;
+}
+.animation-text h4 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
 }
 
 /* ------------------------------------------
@@ -127,6 +134,12 @@
         transform: translateX(0px);
     }
 }
+.floating-download-buttons .download-column h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #004000;
+}
 .floating-store {
     width: 160px;
     cursor: pointer;
@@ -136,6 +149,7 @@
 /* .floating-store:hover {
     transform: scale(1.00);
 } */
+ 
 /* ------------------------------------------
 -------------- PHONE MOCKUP
 ---------------------------------------------*/
@@ -148,7 +162,7 @@
     animation-delay: 0.5s;
 }
 .logo-icon-wrapper .phone-mockup img {
-    margin-top: -0px;
+    margin-top: -30px;
     width: 450px;
     height: auto;
 }
@@ -185,7 +199,7 @@
 ------------------ CAROUSEL
 ---------------------------------------------*/
 .carousel-header h1 {
-    margin-top: 150px;
+    margin-top: 170px;
     margin-left: 80px;
     margin-bottom: 15px;
     color: #004000;
@@ -217,7 +231,8 @@
     flex: 0 0 250px;
     background: #e7ebe8;
     border-radius: 25px;
-    padding: 40px;
+    min-width: 280px;
+    padding: 30px 30px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
     white-space: normal;
     display: flex;
@@ -249,18 +264,211 @@
     color: #004000;
     font-family: "Work Sans", sans-serif;
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 500;
     align-items: center;
 }
 .feature-card p {
     font-size: 20px;
-    font-weight: 100px;
+    font-weight: 100;
     font-family: "Work Sans", sans-serif;
     margin: 0;
     color: #004000;
 }
 .features-carousel:hover .animation-layer {
     animation-play-state: paused;
+}
+
+/* ------------------------------------------
+---------------- PROBLEM CARDS
+---------------------------------------------*/
+.problems-solutions-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 40px 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 0px;
+    overflow: visible;
+}
+.problems-solutions-card {
+    position: relative;
+    background: #e7ebe8;
+    width: 100%;
+    height: 315px;
+    padding: 0px 0px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    overflow: visible;
+    transition: transform 0.25s ease;
+}
+.problems-solutions-card:hover {
+    background: #004000;
+    transform: scale(1.02);
+}
+/* ICONS */
+.problems-solutions-card .icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 30px;
+    transition: opacity 0.25s ease;
+}
+.label-problem,
+.problem-icon {
+    opacity: 1;
+}
+.label-solution,
+.solution-icon {
+    opacity: 0;
+}
+/* LABEL */
+.label-problem,
+.label-solution {
+    position: absolute;
+    bottom: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.35;
+    text-align: center;
+    transition: opacity 0.25s ease, color 0.25s ease;
+}
+.label-problem {
+    opacity: 1;
+    color: #0A2F0A;
+}
+.label-solution {
+    opacity: 0;
+    color: white;
+}
+/* TEXT */
+.problem-text,
+.solution-text {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    line-height: 1.35;
+    text-align: center;
+    transition: opacity 0.2s ease, color 0.2s ease;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+.problem-text {
+    opacity: 1;
+    color: #0A2F0A;
+}
+.solution-text {
+    opacity: 0;
+    color: white !important;
+}
+/* HOVER STATE */
+.problems-solutions-card:hover {
+    background: #004000;
+    /* transform: translateY(-4px); */
+}
+/* Swap labels */
+.problems-solutions-card:hover .label-problem { opacity: 0; }
+.problems-solutions-card:hover .label-solution { opacity: 1; }
+/* Swap icons */
+.problems-solutions-card:hover .problem-icon { opacity: 0; }
+.problems-solutions-card:hover .solution-icon { opacity: 1; }
+/* Swap text */
+.problems-solutions-card:hover .problem-text { opacity: 0; }
+.problems-solutions-card:hover .solution-text { opacity: 1; }
+
+/* HOVER HINT ANIMATION */
+.problems-solutions-card::after {
+    content: "Hover to see solution";
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    font-weight: 100;
+    color: #004000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+.problems-solutions-card.hover-hint::after {
+    opacity: 0.6;
+    animation: hoverShimmer 2.6s ease-in-out infinite;
+}
+@keyframes hoverShimmer {
+    0% { opacity: 0.25; }
+    50% { opacity: 0.9; }
+    100% { opacity: 0.25; }
+}
+.problems-solutions-card:hover::after {
+    opacity: 0 !important;
+}
+
+/* ------------------------------------------
+--------- GET THE APP DOWNLOAD BUTTONS 2
+---------------------------------------------*/
+.get-the-app2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.get-the-app2 h2 {
+    margin-bottom: -10px;
+}
+
+.get-the-app2-row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.get-the-app2-row img {
+    width: 100px;
+}
+.get-the-app2-row h2 {
+    align-items: center;
+}
+.download-buttons {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    gap: 10px;
+    z-index: 999;
+    opacity: 0;
+}
+.download-buttons img {
+    width: 140px;
+}
+.download-buttons img.play-store {
+    width: 155px;
+}
+.download-buttons .download-column h2 {
+    margin-top: 45px;
+    margin-bottom: 15px;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #004000;
+}
+.floating-store2 {
+    width: 160px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 0 rgba(0,0,0,0.2));
+}
+.download-row {
+    margin-top: 0px;
+    margin-bottom: 45px;
+}
+.floating-store:hover {
+    transform: scale(1.00);
 }
 
 
@@ -370,6 +578,15 @@
 .slider-wrapper {
     width: 100%;
     overflow: hidden;
+}
+.features-slider-header h1 {
+    margin-left: 80px;
+    margin-bottom: 30px;
+    color: #004000;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+
 }
 .slides {
     display: flex;
@@ -531,6 +748,9 @@
 /* ------------------------------------------
 ------------------ TESTIMONIALS
 ---------------------------------------------*/
+.testimonials-header {
+    margin-top: 150px;
+}
 .testimonials-header h1 {
     margin-top: 0px;
     margin-left: 80px;
@@ -539,6 +759,14 @@
     font-family: "Inter", sans-serif;
     font-size: 30px;
     font-weight: 900;
+}
+.testimonials-header p {
+    margin-left: 80px;
+    margin-bottom: 0px;
+    color: #004000;
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 100;
 }
 .testimonials-spacer {
     flex: 0 0 75px;
