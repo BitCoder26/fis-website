@@ -3,13 +3,13 @@
 @@@@@@@@@@@@@@@@ ALL 3 PAGES SHARE THIS
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 */
-.main-text-foodx100 h2 {
+.foodx100-wrapper h2 {
     font-family: "Inter", sans-serif;
     font-weight: 900;
     font-size: 30px;
     color: #004000;
 }
-.main-text-foodx100 p {
+.foodx100-wrapper p {
     font-family: "Work Sans", sans-serif;
     font-weight: 100;
     font-size: 20px;
@@ -109,7 +109,7 @@
     background-color: white;
     border-radius: 25px;
     box-shadow: 0 0px 20px rgba(0,0,0,0.2);
-    height: 500px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -129,19 +129,27 @@
     margin-bottom: 50px;
     text-decoration: none;
 }
+.foodx100-bigger-mission {
+    margin-top: -30px;
+}
 .foodx100-bigger-mission a {
     text-decoration: none;
     color: #ffb300;
     margin-bottom: 80px;
 }
 .foodx100-bigger-mission p {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
-.foodx-community-map {
+.database-container {
+    padding: 20px 80px;
+    background: #e7ebe8;
+    margin: 50px 0;
+}
+.foodx100-map {
     background-color: white;
     border-radius: 25px;
+    height: 800px;
 }
-
 
 /*
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -192,15 +200,15 @@
     width: 100%;
 }
 .community-partners-card {
-    background: white;
+    background: #e7ebe8;
     border-radius: 25px;
-    padding: 15px 40px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 25px 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
     transition: 0.4s ease;
 }
 .community-partners-card:hover {
     transform: scale(1.01);
-    box-shadow: 0 0 20px rgba(0,0,0,0.35);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 .community-partners-row a {
     text-decoration: none;
@@ -216,11 +224,67 @@
     margin-bottom: 50px;
     margin-top: 50px;
 }
-
+.map-container h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: #004000;
+    margin-bottom: -20px;
+}
+.map-container {
+    padding: 20px 80px;
+    background: #e7ebe8;
+    margin: 10px 0;
+}
+.foodx-community-map {
+    background-color: white;
+    border-radius: 25px;
+    height: 800px;
+}
 
 /*
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@ COOK
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 */
+.cook-wrapper {
+    margin-bottom: -20px;
+}
+.cook-database {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.cook-database p {
+    color: #004000;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
 
+}
+.cook-container .cook-features {
+    list-style: none;
+    padding-left: 0;
+}
+.cook-features img {
+    width: 15px;
+    height: 15px;
+}
+.cook-container {
+    padding: 20px 80px;
+    background: #e7ebe8;
+    margin: 80px 0;
+}
+.cook-map {
+    background-color: white;
+    border-radius: 25px;
+    height: 800px;
+}

@@ -209,20 +209,19 @@
 }
 .carousel-track {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: nowrap;
     max-width: 100%;         
 }
 .feature-card {
     flex: 0 0 250px;
-    background: white;
+    background: #e7ebe8;
     border-radius: 25px;
     padding: 40px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.25);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
     white-space: normal;
     display: flex;
     flex-direction: row; 
-    gap: 15px;
     align-items: center;
 }
 .feature-card .column {
@@ -317,6 +316,7 @@
     margin-left: -140px;
     flex-direction: column;
     gap: 10px;
+    color: white !important;
 }
 .feature-top-row {
     display: flex;
@@ -351,6 +351,12 @@
     list-style: none;
     padding: 0;
     margin: 0;
+}
+.feature-bulletpoints li {
+    color: #FFFFFF !important;
+    font-family: "Work Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 100;
 }
 .feature-bulletpoints img {
     width: 20px;
@@ -434,13 +440,14 @@
     margin-bottom: 0px;
 }
 .bubble {
-    background: white;
+    background: #e7ebe8;
     border: 1px solid #E4E4E4;
     padding: 22px 28px;
     border-radius: 25px;
     cursor: pointer;
     text-align: left;
     transition: 0.25s ease;
+    /* box-shadow: 0 0 15px rgba(0,0,0,0.2); */
 }
 .bubble h3 {
     margin-bottom: 10px;
@@ -461,7 +468,7 @@
 }
 .bubble:hover {
     transform: scale(1.01);
-    box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 0px 20px rgba(0,0,0,0.4);
 }
 .bubble.active {
     background: #004000;
@@ -557,10 +564,10 @@
 }
 .testimonials-card {
     flex: 0 0 250px;
-    background: white;
+    background: #e7ebe8;
     border-radius: 25px;
     padding: 50px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.25);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
     white-space: normal;
     display: flex;
     flex-direction: row; 
@@ -579,7 +586,7 @@
     justify-content: center;
 }
 .icon-wrapper .stars {
-    max-height: 150px;
+    max-height: 200px;
     width: auto;
 }
 .testimonials-card img {
