@@ -28,11 +28,11 @@
 .open-faq-btn {
     background-color: #004000;
     border-radius: 50px;
-    padding: 15px 35px;
+    padding: 18px 35px;
     color: white;
     font-size: 25px;
     cursor: pointer;
-    transition: 0.4s ease;
+    transition: 0.2s ease;
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
     font-weight: 700;
@@ -41,8 +41,8 @@
     margin-top: 0px;
 }
 .open-faq-btn:hover {
-    background: #004000;
-    color: white;
+    background-color: #ffb300;
+    color: #004000;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 .buttons-row-foodx100 {
@@ -56,11 +56,11 @@
 .become-founder-btn {
     background-color: #004000;
     border-radius: 50px;
-    padding: 15px 35px;
-    color: white !important;
+    padding: 18px 35px;
+    color: white;
     font-size: 25px;
     cursor: pointer;
-    transition: 0.4s ease;
+    transition: 0.2s ease;
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
     font-weight: 700;
@@ -69,19 +69,19 @@
     margin-top: 0px;
 }
 .become-founder-btn:hover {
-    background: #004000;
-    color: white;
+    background: #ffb300;
+    color: #004000;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 /* Early access button */
 .early-access-btn {
     background-color: #004000;
     border-radius: 50px;
-    padding: 15px 35px;
-    color: white !important;
+    padding: 18px 35px;
+    color: white;
     font-size: 25px;
     cursor: pointer;
-    transition: 0.4s ease;
+    transition: 0.2s ease;
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
     font-weight: 700;
@@ -90,8 +90,8 @@
     margin-top: 0px;
 }
 .early-access-btn:hover {
-    background: #004000;
-    color: white;
+    background-color: #ffb300;
+    color: #004000;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 .floating-store:hover {
@@ -140,7 +140,7 @@
 }
 .foodx100-bigger-mission a {
     text-decoration: none;
-    color: #ffb300;
+    color: white;
     margin-bottom: 80px;
 }
 .foodx100-bigger-mission p {

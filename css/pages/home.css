@@ -100,15 +100,15 @@
     flex-direction: row;
     gap: 40px;
 }
-.cta-card h2 {
+.cta-row .cta-column h2 {
     margin-top: 22px;
     margin-bottom: -10px;
     font-family: "Work Sans", sans-serif;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 900;
     color: #004000;
 }
-.cta-card p {
+.cta-row .cta-column p {
     font-family: "Work Sans", sans-serif;
     font-size: 20px;
     font-weight: 100;
@@ -486,11 +486,11 @@
 .discover-btn {
     background-color: #004000;
     border-radius: 50px;
-    padding: 15px 35px;
+    padding: 18px 35px;
     color: white;
     font-size: 25px;
     cursor: pointer;
-    transition: 0.4s ease;
+    transition: 0.2s ease;
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
     font-weight: 700;
@@ -499,8 +499,8 @@
     margin-top: 0px;
 }
 .discover-btn:hover {
-    background: #004000;
-    color: white;
+    background: #ffb300;
+    color: #004000;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
@@ -602,11 +602,11 @@
 .open-btn {
     background-color: #004000;
     border-radius: 50px;
-    padding: 15px 35px;
+    padding: 18px 35px;
     color: white;
     font-size: 25px;
     cursor: pointer;
-    transition: 0.4s ease;
+    transition: 0.2s ease;
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
     font-weight: 700;
@@ -615,7 +615,8 @@
     margin-top: 20px;
 }
 .open-btn:hover {
-    color: white;
+    color: #004000;
+    background-color: #ffb300;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
@@ -655,11 +656,11 @@
     font-weight: 700;
     border-radius: 50px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.2s;
     margin-top: 20px;
 }
 .join-cta-btn:hover {
-    background: #ffffff;
+    background: #ffb300;
     color: #004000;
     box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }

@@ -22,6 +22,58 @@
 }
 
 /* ------------------------------------------
+------------ SHARE OWNER BANNER
+---------------------------------------------*/
+.share-owner-banner {
+    position: fixed;
+    top: -120px;
+    left: 0;
+    width: 100%;
+    background: #e7ebe8;
+    color: white;
+    padding: 20px 0;
+    z-index: 9999;
+    transition: top 0.7s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    font-family: "Inter", sans-serif;
+}
+.banner-content {
+    color: #004000;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.banner-btn {
+    background: #004000;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    border-radius: 40px;
+    white-space: nowrap;
+}
+.banner-btn:hover {
+    color: #004000;
+    background: #ffb300;
+}
+.banner-close {
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    opacity: 0.8;
+}
+.banner-close:hover {
+    opacity: 1;
+}
+
+/* ------------------------------------------
 -------------- MEMBERSHIP OPTIONS 
 ---------------------------------------------*/
 .membership-options {
@@ -50,65 +102,81 @@
     gap: 20px;
 }
 .membership-wrapper {
-    flex: 0 0 calc(25% - 15px);
-    max-width: calc(25% - 15px);
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+    align-items: center;
 }
 .card-link {
     text-decoration: none;
 }
 /* membership boxes */
 .membership-box {
-    height: 290px;
-    padding-top: 25px;
-    padding-bottom: 20px;
-    background-color: #e7ebe8;
-    border-radius: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 220px;
+    padding-left: 40px;
+    padding-right: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #e7ebe8;
+    border-radius: 25px;
+    justify-content: center;   
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .card-content {
-    flex: 1; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     width: 100%;
+}
+.card-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+.membership-icon-box {
+    width: 55px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.card-column {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: start;
 }
 .membership-box h1,
 .membership-box h2,
 .membership-box .cost,
 .membership-box p {
     margin: 0;
-    padding: 0;
+    padding: 6px;
+}
+.membership-benefits p {
+    text-align: left !important;
+    font-size: 18px !important;
+    font-family: "Work Sans", sans-serif;
 }
 .card-content img {
-    width: 40px;
-    height: 40px;
-    color: #004000
-}
-.card-content .bigger-image  img{
     width: 50px;
     height: 50px;
     color: #004000;
-    margin-bottom: -10px;
+}
+.card-content .bigger-image {
+    width: 60px;
+    height: 60px;
+    color: #004000;
 }
 .card-content h1 {
-    height: 30px;
-    margin-top: 20px;
-    margin-bottom: -5px;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     font-family: "Inter", sans-serif;
     font-weight: 900;
     color: #004000
 }
 .card-content h2 {
-    height: 30px;
-    margin-top: 0px;
-    margin-bottom: 0px;
     text-align: center;
     font-size: 20px;
     font-family: "Inter", sans-serif;
@@ -116,8 +184,6 @@
     color: #004000
 }
 .card-content .cost {
-    height: 40px;
-    margin-top: 5px;
     text-align: center;
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
@@ -126,8 +192,6 @@
 }
 
 .card-content p {
-    margin-top: 5px;
-    height: 170px;
     text-align: center;
     font-size: 17px;
     font-family: "Work Sans", sans-serif;
@@ -146,76 +210,146 @@
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
-
 /* ------------------------------------------
-------------- BECOME A SUPPORTER 
+--------- VOLUNTEER + SUPPORTER SECTION
 ---------------------------------------------*/
-.supporter {
-    margin-top: 100px;
-    height: 450px;
-    line-height: 1.2;
-    padding-top: 20px;
-    text-align: center;
-    background-color: #004000;
-    line-height: 1.2;
+.supporter-volunteer-row {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+    width: 100%;
 }
+
+/* Shared container for both columns */
+.volunteer, 
+.supporter {
+    width: 50%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Shared text styles */
+.volunteer h2, 
 .supporter h2 {
     font-size: 35px;
     font-weight: 800;
     font-family: "Inter", sans-serif;
-    color: white;
+    color: #004000;
+    margin-bottom: 10px;
 }
+.volunteer p,
 .supporter p {
     font-size: 20px;
     font-weight: 100;
     font-family: "Work Sans", sans-serif;
-    color: white;
+    color: #004000;
 }
-.card-content .supporter-benefits{
-    justify-items: center;
+.shared-benefits {
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-.card-content .supporter-benefits p {
+.shared-benefits p {
     text-align: left;
     font-size: 17px;
+    font-family: "Work Sans", sans-serif;
+    line-height: 1.5;
 }
-.supporter .supporter-benefits{
-    justify-items: center;
+.benefits-wrapper {
+    height: 120px;
+    display: flex;
+    align-items: start;
 }
-.supporter .supporter-benefits p{
+.benefits-wrapper p {
     text-align: left;
+    margin: 0;
 }
-/* Button */
-.supporter-button-box {
-    margin-top: 0px;
-    margin-bottom: 50px;
+.shared-button-box {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-.supporter-button-box p {
-    font-family: "Work Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    color: #004000;
-    text-decoration: none;
-}
-.support-btn {
+.shared-btn {
     display: inline-block;
-    background: #ffffff;
-    color: #004000;
     padding: 18px 50px;
     font-size: 20px;
     font-weight: 700;
     border-radius: 50px;
     text-decoration: none;
-    transition: 0.3s;
-    margin-top: 20px;
+    transition: 0.2s;
 }
-.support-btn:hover {
-    background: #ffffff;
+.volunteer .shared-btn {
+    background: #004000;
+    color: white;
+}
+.volunteer .shared-btn:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    background-color: #ffb300;
+    color: #004000;
+}
+.supporter .shared-btn {
+    background: #004000;
+    color: white;
+}
+.supporter .shared-btn:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    background-color: #ffb300;
+    color: #004000;
+}
+
+/* ------------------------------------------
+---------------- DONATION
+---------------------------------------------*/
+.donation-section {
+    background-color: #004000;
+    padding: 80px 80px;
+    text-align: center;
+}
+.donation-section h1 {
+    font-size: 20px;
+    font-weight: 800;
+    font-family: "Work Sans", sans-serif;
+    color: white;
+}
+.donation-section p {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: "Work Sans", sans-serif;
+    color: white;
+}
+.donate-button-box {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.donate-btn {
+    display: inline-block;
+    padding: 18px 50px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.donation-section .donate-btn {
+    background: white;
+    color: white;
+}
+.donation-section .donate-btn:hover {
+    color: #004000;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    background-color: #ffb300;
+}
+.donation-section .donate-btn {
+    background: white;
+    color: #004000;
+}
+.donation-section .donate-btn:hover {
     color: #004000;
     box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }

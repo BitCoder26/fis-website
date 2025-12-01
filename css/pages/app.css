@@ -295,7 +295,7 @@
     position: relative;
     background: #e7ebe8;
     width: 100%;
-    height: 315px;
+    height: 300px;
     padding: 0px 0px;
     border-radius: 25px;
     text-align: center;
@@ -309,7 +309,7 @@
 }
 .problems-solutions-card:hover {
     background: #004000;
-    transform: scale(1.02);
+    /* transform: scale(1.02); */
 }
 /* ICONS */
 .problems-solutions-card .icon {
@@ -331,7 +331,7 @@
 .label-problem,
 .label-solution {
     position: absolute;
-    bottom: 190px;
+    bottom: 180px;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
@@ -339,7 +339,7 @@
     font-weight: 900;
     line-height: 1.35;
     text-align: center;
-    transition: opacity 0.25s ease, color 0.25s ease;
+    transition: opacity 0.1s ease, color 0.1s ease;
 }
 .label-problem {
     opacity: 1;
@@ -390,6 +390,7 @@
 /* HOVER HINT ANIMATION */
 .problems-solutions-card::after {
     content: "Hover to see solution";
+    width: 250px;
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -722,11 +723,11 @@
 .try-it-btn {
     background-color: #004000;
     border-radius: 50px;
-    padding: 15px 35px;
+    padding: 18px 35px;
     color: white;
     font-size: 25px;
     cursor: pointer;
-    transition: 0.4s ease;
+    transition: 0.2s ease;
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
     font-weight: 700;
@@ -735,8 +736,8 @@
     margin-top: 20px;
 }
 .try-it-btn:hover {
-    background: #004000;
-    color: white;
+    background: #ffb300;
+    color: #004000;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 /* Hide radio buttons */
@@ -890,12 +891,6 @@
 .download-buttons img.play-store {
     width: 155px;
 }
-
-
-
-
-
-
 
 
 /* * {

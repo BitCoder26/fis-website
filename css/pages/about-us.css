@@ -96,11 +96,11 @@
 .join-movement-btn {
     background-color: #004000;
     border-radius: 50px;
-    padding: 15px 35px;
+    padding: 18px 35px;
     color: white;
     font-size: 25px;
     cursor: pointer;
-    transition: 0.4s ease;
+    transition: 0.2s ease;
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
     font-weight: 700;
@@ -109,8 +109,8 @@
     margin-top: 0px;
 }
 .join-movement-btn:hover {
-    background: #004000;
-    color: white;
+    background: #ffb300;
+    color: #004000;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
