@@ -39,17 +39,17 @@
 }
 .banner-content {
     color: #004000;
-    width: 90%;
-    max-width: 1200px;
+    width: 88%;
+    max-width: 1200;
     margin: auto;
     font-size: 20px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 .banner-btn {
     background: #004000;
-    padding: 15px 20px;
+    padding: 15px 30px;
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
@@ -276,7 +276,7 @@
 }
 .shared-btn {
     display: inline-block;
-    padding: 18px 50px;
+    padding: 18px 30px;
     font-size: 20px;
     font-weight: 700;
     border-radius: 50px;
@@ -329,7 +329,7 @@
 }
 .donate-btn {
     display: inline-block;
-    padding: 18px 50px;
+    padding: 18px 30px;
     font-size: 20px;
     font-weight: 700;
     border-radius: 50px;

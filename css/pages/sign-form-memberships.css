@@ -225,7 +225,8 @@ button[type="submit"] {
     display: block;
 }
 button[type="submit"]:hover {
-    background: #004000;
+    background: #ffb300;
+    color: #004000;
     box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 button[type="submit"] {
