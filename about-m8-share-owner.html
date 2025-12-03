@@ -36,7 +36,7 @@
         <div class="container hero-content">
             <div class="hero-left">
                 <!-- <h1 class="small-title">ABOUT</h1> -->
-                <h1 class="big-title">Share Owner</h1>
+                <h1 class="big-title">Community Share Owner</h1>
             </div>
             <!-- Sticky note -->
             <!-- <div class="sticky-stack">
@@ -61,7 +61,7 @@
         <section class="tagline">
             <div class="tagline-m1">
                 <p>
-                    Invest in change. Help build the UK's first community-owned platform helping people make healthier, more informed food choices.
+                    Invest in change. Help build the UK's first community-owned platform<br>helping people make healthier, more informed food choices.
                 </p>
             </div>
         </section>
@@ -113,6 +113,357 @@
                 </div>
             </div>
         </section>
+
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        @@@@@@@@@@@@@@@@@@@@     FORM     @@@@@@@@@@@@@@@@@@@@@@
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+        <section class="form-wrapper">
+            <h2>Community Share Owner Membership Application Form</h2>
+            <p class="membership-initial-text">
+                Apply to become a Community Share Investor in <b>The Food Investors Society Ltd</b>
+                and support the development of our community-owned digital platform,
+                foodXchange.
+                <br><br>
+                This application relates to withdrawable, non-transferable community shares in The
+                Food Investors Society Ltd, (Community Benefit Society FCA Reg. No. 9315). This is
+                not a protected investment and you may lose some or all of the money you invest.
+
+            </p>
+            <form action="/submit-membership" method="POST">
+
+                <!-- /////////////////////////////////////////////
+                ////////////// 1. PERSONAL DETAILS 
+                ////////////////////////////////////////////////-->
+                <h3>1. Personal Details</h3>
+                <p>Please provide your full legal name and address for the Society's statutory Register of Members.</p>
+
+                <!-- name + surname -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name"><b>First Name:</b><i> (required)</i></label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="surname"><b>Surname:</b><i> (required)</i></label>
+                        <input type="text" id="surname" name="surname" required>
+                    </div>
+                </div>
+
+                <!-- address -->
+                <label for="address"><b>Postal Address</b> <i> (required)</i></label>
+                <input type="text" id="address" name="address" required>
+
+                <!-- postcode -->
+                <label for="postcode"><b>Postcode</b><i> (required)</i></label>
+                <input type="text" id="postcode" name="postcode" required>
+
+                <!-- email + phone -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email"><b>Email Address</b><i> (required)</i></label>
+                        <input type="text" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone"><b>Phone Number</b><i> (optional)</i></label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+
+                <!-- preferred contact method -->
+                <p><b>Preferred Contact Method:</b></p>
+            
+                <div>
+                    <input type="radio" id="contact-email" name="contact-method" value="email" required>
+                    <label for="contact-email">Email</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="contact-post" name="contact-method" value="post">
+                    <label for="contact-post">Post</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                    <label for="contact-phone">Phone</label>
+                </div>
+
+                <br><br>
+
+                <!-- /////////////////////////////////////////////
+                /////////////// 2. CONFLICT OF INTEREST
+                ////////////////////////////////////////////////-->
+                <h3>2. Conflict of Interest and Affiliations<i> <span class="required">(required)</span></i></h3>
+                <p>
+                    The Food Investors Society is committed to transparency and independence. To
+                    protect the integrity of our mission, we ask all members to disclose any personal,
+                    professional, or organisational interests that could reasonably be perceived as
+                    influencing their participation in the Society.
+                </p>
+
+                <!-- declaration 1 -->
+                <p><b>Do you have any current or past affiliations that may represent a potential conflict of interest?</b></p>
+                <label>
+                    <input type="radio" name="conflict-of-interest" value="no" required>
+                    No, I have no relevant affiliations.
+                </label>
+                <label>
+                    <input type="radio" name="conflict-of-interest" value="yes">
+                    Yes (please provide details below):
+                </label>
+                <label for="conflict-details">If yes, please describe the organisation(s), your role, and nature of involvement:</label>
+                <textarea id="conflict-details" name="conflict-details" rows="4"></textarea>
+                
+                <!-- declaration 2 -->
+                <p><b>Declaration:</b></p>
+                <p>
+                    “I confirm that the information provided is accurate and that I will notify the Society of
+                    any future potential conflicts of interest should they arise.”
+                </p>
+                <label>
+                    <input type="checkbox" name="conflict-agree" required>
+                    <i>I agree to this declaration.</i>
+                </label>
+
+                <br><br>
+
+                <!-- /////////////////////////////////////////////
+                ////////////// 3. DECLARATION OF SUPPORT 
+                ////////////////////////////////////////////////-->
+                <h3>3. Community Share Owner Member Declaration<i> <span class="required">(required)</span></i></h3>
+                <p>
+                    “I support the aims of The Food Investors Society Ltd to create a healthier, fairer, and
+                    more sustainable food system. I agree to uphold the Society's values and abide by its
+                    <u><b><a href="assets/documents/rules.pdf" target="_blank" rel="noopener noreferrer">RULES</a></b></u>".
+                    
+                </p>
+                <label>
+                    <input type="checkbox" name="declaration-of-support" required>
+                    <i>I agree to the above declaration.</i>
+                </label>
+
+                <br><br>
+
+                <!-- ///////////////////////////////////////////////
+                //////// 4. VOTING & ELIGIBILITY CONFIRMATION 
+                /////////////////////////////////////////////////-->
+                <h3>4. Voting & Eligibility Confirmation<i> <span class="required">(required)</span></i></h3>
+                <p>
+                    “Community Share Owner Membership includes one £1 non-withdrawable, non-
+                    transferable membership share. Additional investment is made through withdrawable
+                    community shares. Each member, regardless of investment size, has one vote.”
+                </p>
+                <label>
+                    <input type="checkbox" name="understand-share-cost" required> 
+                    <i>I understand that my membership includes a £1 share, which is non-withdrawable and non-transferable.</i>
+                </label>
+                <label>
+                    <input type="checkbox" name="understand-16-over" required>
+                    <i>I confirm I am aged 16 or over and eligible to become a member investor.</i>
+                </label>
+                
+                <br><br>
+
+                <!-- /////////////////////////////////////////////
+                ///////////// 5. DATA PROTECTION & CONSENT 
+                ////////////////////////////////////////////////-->
+                <h3>5. Data Protection and Consent<i> <span class="required">(required)</span></i></h3>
+                <p>
+                    Your details will be used for administering your shareholding, statutory reporting, and
+                    relevant Society communications, in line with UK GDPR.
+                </p>
+                <label>
+                    <input type="checkbox" name="consent-contact" required>
+                    <i>I consent to The Food Investors Society contacting me with relevant news, updates, and invitations.</i>
+                </label>
+                <label>
+                    <input type="checkbox" name="consent-withdrawal" required> 
+                    <i>I understand I can withdraw my consent at any time.</i>
+                </label>
+
+                <br><br>
+
+                <!-- //////////////////////////////////////////////
+                //////// 6. CONFIRMATION OF SHARE DOCUMENT 
+                //////////////////////////////////////////////////-->
+                <h3>6. Confirmation of Share Offer Document<i> <span class="required">(required)</span></i></h3>
+                <p><i>
+                    Before investing, you must read the <b><u>Community Share Offer Document</u></b>.
+                </i></p>
+                <p><b><i>Please confirm:</i></b></p>
+                <label>
+                    <input type="checkbox" name="consent-community-share-offer" required> 
+                    <i>
+                        I have read, understood, and accept the terms of the Community Share Offer Document, including
+                        the risks associated with purchasing withdrawable shares in a Community Benefit Society.
+                    </i>
+                </label>
+                <label>
+                    <input type="checkbox" name="consent-fsma-exemption" required> 
+                    <i>
+                        I acknowledge that community shares are exempt from FSMA regulation and are not
+                        covered by the Financial Services Compensation Scheme or Financial Ombudsman Service.
+                    </i>
+                </label>
+
+                <br><br>
+
+                <!-- //////////////////////////////////////////////
+                //// 7. COMMUNITY SHARE INVESTMENT AMOUNT 
+                //////////////////////////////////////////////////-->
+                <h3>7. Community Share Investment Amount<i> <span class="required">(required)</span></i></h3>
+                <p>
+                    Minimum investment: £25 (25 shares at £1 each)
+                    Maximum investment: £20,000 (20,000 shares at £1 each)
+                </p>
+                <!-- Investment amount: -->
+                <p><b>Investment amount:</b></p>
+                <label for="investment-amount">Enter total amount you wish to invest (£):</label>
+                <input type="text" id="investment-amount" name="investment-amount" required>
+                
+                <label>
+                    <input type="checkbox" name="own-funds-confirmation" required> 
+                    <i>I confirm this investment is made from my own funds and I am not relying on credit.</i>
+                </label>
+
+                <!-- payment method -->
+                <p><b>Payment method:</b></p>
+                <label>
+                    <input type="radio" name="payment-method" value="online" required> 
+                    Online Payment (secure link)
+                </label>
+                <label>
+                    <input type="radio" name="payment-method" value="direct-bank-transfer"> 
+                    Direct Bank Transfer
+                </label>
+
+                <br><br>
+
+                <!-- //////////////////////////////////////////////
+                /////////// 8. MANDANTORY RISK ASSESSMENT 
+                //////////////////////////////////////////////////-->
+                <h3>8. Mandatory Risk Assessment<i> <span class="required">(required)</span></i></h3>
+                <p>
+                    “I understand that community shares are at risk and may be redeemed only at the
+                    discretion of the Society's Board. I may not be able to withdraw my shares when I
+                    request. I understand that I may lose all or part of my investment.”
+                </p>
+                <label>
+                    <input type="checkbox" name="risk-assessment-acceptance" required> 
+                    <i>I confirm I have read and accept this Risk Statement.</i>
+                </label>
+
+                <br><br>
+
+                <!-- /////////////////////////////////////////////////
+                ///////// 9. INFO FOR IMPACT AND INSIGHT ONLY 
+                ////////////////////////////////////////////////////--> 
+                <h3>9. Information for Impact and Insight<i> <span class="required">(optional)</span></i></h3>
+                <p><i>
+                    This section is <b>optional</b>, but your responses help us understand who we're reaching
+                    and how we can make our work more inclusive and effective.
+                </i></p>
+
+                <label for="age-range"><b>Age Range:</b></label>
+                <select id="age-range" name="age-range">
+                    <option value="" disabled selected>Select age range</option>
+                    <option value="under-18">Under 18</option>
+                    <option value="18-24">18-24</option>
+                    <option value="25-44">25-44</option>
+                    <option value="45-64">45-64</option>
+                    <option value="65-plus">65+</option>
+                    <option value="prefer-not-to-say">Prefer not to say</option>
+                </select>
+
+                <label for="ethnicity"><b>Ethnic Background:</b></label>
+                <select id="ethnicity" name="ethnicity">
+                    <option value="" selected>Select an option</option>
+
+                    <option value="white">White</option>
+                    <option value="mixed">Mixed or Multiple Ethnic Groups</option>
+                    <option value="asian">Asian or Asian British</option>
+                    <option value="black">Black, Black British, Caribbean or African</option>
+                    <option value="arab">Arab</option>
+                    <option value="other">Other (please specify)</option>
+                </select>
+
+                <!-- Only filled if “Other” is selected -->
+                <label for="ethnicity-other" class="ethnicity-other-label">If other, please specify</label>
+                <input type="text" id="ethnicity-other" name="ethnicity-other">
+
+                <!-- disability -->
+                <label><b>Do you consider yourself to have a disability or long-term health condition?</b></label>
+                <label>
+                    <input type="radio" value="yes" name="disability">
+                    Yes
+                </label>
+                <label>
+                    <input type="radio" value="no" name="disability">
+                    No
+                </label>
+                <label>
+                    <input type="radio" value="prefer-not-to-say" name="disability">
+                    Prefer not to say
+                </label>
+
+                <!-- how did you hear about us -->
+                <label for="hear-about-us"><b>How did you hear about The Food Investors Society / foodXchange?</b></label>
+                <input type="text" id="hear-about-us" name="hear-about-us">
+
+                <!-- why invest in community shares -->
+                <label for="why-invest-in-community-shares"><b>Why are you choosing to invest in community shares?</b></label>
+                <textarea id="why-invest-in-community-shares" name="why-invest-in-community-shares" rows="4"></textarea>
+
+                <br><br><br>
+
+                <!-- ///////////////////////////////////////////////
+                ///////////// 8. SIGNATURE (Required) 
+                ///////////////////////////////////////////////// -->
+                <h3><b>8. Signature</b><i> <span class="required">(required)</span></i></h3>
+                <label for="signature"><b>Digital Signature (type full name)</b></label>
+                <textarea id="signature" name="signature" rows="1" required></textarea>
+            
+                <!-- date -->
+                <label for="date"><b>Date:</b></label>
+                <input type="date" id="date" name="date" required>
+
+                <br><br>
+
+                <!-- ///////////////////////////////////////////////
+                //// 9. OFFICE USE ONLY (hidden admin section) 
+                ///////////////////////////////////////////////// -->
+                <div class="admin-only">
+                    <h3>Office Use Only</h3>
+
+                    <label>Membership ID (auto-generated):</label>
+                    <input type="text" name="membership-id" readonly>
+
+                    <label>Date Approved (auto-generated):</label>
+                    <input type="date" name="date-approved" readonly>
+
+                    <label>Investment Recorded (£):</label>
+                    <input type="number" name="investment-recorded" min="£25" step="0.01">
+
+                    <label>Membership Type:</label>
+                    <input type="text" name="membership-type" value="Annual Individual" readonly>
+
+                    <label>Entered in Register By (Name, Date):</label>
+                    <input type="text" name="entered-by">
+                </div>
+
+                <br><br>
+
+                <!-- ///////////////////////////////////////////////
+                /////////// SUBMIT + REDIRECT TO PAYMENT 
+                ///////////////////////////////////////////////// -->
+                <!-- change from: Submit My Application -->
+                <button type="submit" class="submit-button">Apply to Become a Community Share Owner Member</button> 
+                
+            </form>
+        </section>
+        
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
     </div>
 
     <!-- 
