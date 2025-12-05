@@ -180,7 +180,6 @@
     font-weight: 100;
     font-size: 20px;
     color: #004000;
-
 }
 .foodx-community-container .foodx-community-features {
     list-style: none;
@@ -214,16 +213,18 @@
     margin-bottom: 50px;
 }
 .community-partners-card {
+    width: 50%;
+    height: 490px;
     background: #e7ebe8;
     border-radius: 25px;
     padding: 25px 60px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
     transition: 0.4s ease;
 }
-.community-partners-card:hover {
+/* .community-partners-card:hover {
     transform: scale(1.01);
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
+} */
 .community-partners-row a {
     text-decoration: none;
     width: 50%;
@@ -284,6 +285,49 @@
     border-radius: 25px;
     height: 800px;
 }
+/* sign-up (both cards) button */
+.sign-up-btn {
+    background-color: #004000;
+    border-radius: 50px;
+    padding: 18px 35px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    text-decoration: none;  
+    text-align: center; 
+    margin-top: 0px;
+}
+.sign-up-btn:hover {
+    background: #ffb300;
+    color: #004000;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.community-partner-card-text-wrapper {
+    height: 400px;
+}
+.community-partner-sign-up {
+    text-align: center;
+}
+.local-food-matters-row {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+}
+.local-food-matters-column {
+    display: flex;
+    flex-direction: column;
+}
+.local-food-matters-row img {
+    height: 420px;
+    border-radius: 25px;
+    margin-right: 50px;
+}
+
 
 /*
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

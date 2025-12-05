@@ -153,15 +153,15 @@
 /* ------------------------------------------
 -------------- PHONE MOCKUP
 ---------------------------------------------*/
-.logo-icon-wrapper .phone-mockup {
-    margin-left: 0px;
+.logo-icon-wrapper .phone-mockup-the-app {
+    margin-left: 100px;
     margin-top: -20px;
     opacity: 0;
     transform: translateX(60px);
     animation: slideInRight 1.5s ease forwards;
     animation-delay: 0.5s;
 }
-.logo-icon-wrapper .phone-mockup img {
+.logo-icon-wrapper .phone-mockup-the-app img {
     margin-top: -30px;
     width: 450px;
     height: auto;
@@ -293,7 +293,7 @@
 }
 .problems-solutions-card {
     position: relative;
-    background: #e7ebe8;
+    background: #004000;  /* #e7ebe8; */
     width: 100%;
     height: 300px;
     padding: 0px 0px;
@@ -308,7 +308,7 @@
     transition: transform 0.25s ease;
 }
 .problems-solutions-card:hover {
-    background: #004000;
+    background: #ffb300 !important;
     /* transform: scale(1.02); */
 }
 /* ICONS */
@@ -343,11 +343,11 @@
 }
 .label-problem {
     opacity: 1;
-    color: #0A2F0A;
+    color: white;
 }
 .label-solution {
     opacity: 0;
-    color: white;
+    color: #004000;
 }
 /* TEXT */
 .problem-text,
@@ -366,11 +366,11 @@
 }
 .problem-text {
     opacity: 1;
-    color: #0A2F0A;
+    color: white !important;
 }
 .solution-text {
     opacity: 0;
-    color: white !important;
+    color: #004000 !important;
 }
 /* HOVER STATE */
 .problems-solutions-card:hover {
@@ -389,6 +389,7 @@
 
 /* HOVER HINT ANIMATION */
 .problems-solutions-card::after {
+    transition: opacity 0.3s ease, color 0.3s ease;
     content: "Hover to see solution";
     width: 250px;
     position: absolute;
@@ -397,12 +398,13 @@
     transform: translateX(-50%);
     font-size: 15px;
     font-weight: 100;
-    color: #004000;
+    color: white;
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
 }
 .problems-solutions-card.hover-hint::after {
+    color: white;
     opacity: 0.6;
     animation: hoverShimmer 2.6s ease-in-out infinite;
 }
@@ -412,7 +414,8 @@
     100% { opacity: 0.25; }
 }
 .problems-solutions-card:hover::after {
-    opacity: 0 !important;
+    opacity: 0;
+    color: transparent;
 }
 
 /* ------------------------------------------
@@ -648,7 +651,7 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
-    width: 420px;
+    width: 430px;
 }
 .right-column h1 {
     font-family: "Inter", sans-serif;

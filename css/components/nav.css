@@ -5,6 +5,7 @@
     color: white;
     font-size: 15px;
     font-family: "Inter", sans-serif;
+    font-weight: 500;
 }
 .nav-icon {
     width: 20px;
@@ -19,21 +20,21 @@
 }
 .house-icon {
     background-image: url("../../assets/icons/favicon/favicon_green.png");
-    width: 27px;
-    height: 27px;
+    width: 30px;
+    height: 30px;
     transform: scaleX(1.05);
 }
 .house-icon:hover,
 .house-icon.current:hover {
     background-image: url("../../assets/icons/favicon/favicon_orange_white_text.png") !important;
-    width: 27px;
-    height: 27px;
+    width: 30px;
+    height: 30px;
     /* transform: scale(1.2); */
 }
 .house-icon.current {
     /* background-image: url("../../assets/icons/favicon/favicon_orange_white_text.png"); */
-    width: 27px;
-    height: 27px;
+    width: 30px;
+    height: 30px;
 } 
 .top-nav a {
     color: white;

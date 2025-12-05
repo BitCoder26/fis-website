@@ -113,6 +113,19 @@
     color: #004000;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
+.story-row {
+    display: flex;
+    flex-direction: row;
+}
+.story-row img {
+    height: 420px;
+    width: 550px;
+    border-radius: 25px;
+    margin-top: 30px;
+    margin-right: 50px;
+    object-position: center;
+    object-fit: cover;
+}
 
 
 /* //////////////// FOUNDERS //////////////// */
@@ -127,7 +140,7 @@
     font-size: 30px;
     font-weight: 900;
     color: #004000;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 .founders-row {
     display: flex;
@@ -135,6 +148,7 @@
     width: 100%;
 }
 .founder-card {
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,7 +160,6 @@
     font-size: 20px;
     font-weight: 100;
     color: #004000;
-
 }
 .profile-crop {
     margin-bottom: 20px;
@@ -164,8 +177,6 @@
     transform: scale(1.1);
     transform-origin: center center;
     color: #004000 !important;
-}
-.founders .profile-crop img {
     border-radius: 50%;
 }
 .profile-icon {

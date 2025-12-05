@@ -6,7 +6,7 @@
 ---- HERO (ADJUSTMENT FROM MAIN COMPONENT) 
 ---------------------------------------------*/
 .hero-section-app .hero-right  {
-    margin-bottom: -60px;
+    margin-bottom: -15px;
 }
 .sticky-stack {
     pointer-events: none;
