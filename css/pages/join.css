@@ -281,7 +281,7 @@
     font-weight: 700;
     border-radius: 50px;
     text-decoration: none;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 .volunteer .shared-btn {
     background: #004000;
@@ -334,7 +334,7 @@
     font-weight: 700;
     border-radius: 50px;
     text-decoration: none;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 .donation-section .donate-btn {
     background: white;

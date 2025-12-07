@@ -397,41 +397,6 @@
 .bubble-right-5 { top: 65%; left: 79%; background-color: white; color: #004000 }
 .bubble-right-6 { top: 74%; left: 78%; background-color: white; color: #004000 }
 .bubble-right-7 { top: 83%; left: 76%; background-color: white; color: #004000 }
-/* Button: Try my neighbourhood */
-.try-map {
-    margin-top: 0px;
-    margin-bottom: 45px;
-    display: flex;
-}
-.try-map-btn p {
-    font-family: "Work Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    color: #004000;
-    text-decoration: none;
-    justify-content: center;   
-}
-.try-map-btn {
-    background-color: #004000;
-    border-radius: 50px;
-    padding: 15px 35px;
-    color: white;
-    font-size: 25px;
-    cursor: pointer;
-    transition: 0.4s ease;
-    font-size: 20px;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 700;
-    text-decoration: none;  
-    text-align: center; 
-    margin-top: 20px;
-}
-.try-map-btn:hover {
-    background: #004000;
-    color: white;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
 
 /* ------------------------------------------
 --------- PHONE SCREEN + EXPLORE BUTTON 
@@ -507,12 +472,12 @@
 .app-store-badge {
     width: 130px;
     height: 130px;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 .google-play-badge {
     width: 145px;
     height: 145px;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 .app-store-badge:hover,
 .google-play-badge:hover {
@@ -526,7 +491,7 @@
     color: white;
     font-size: 25px;
     cursor: pointer;
-    transition: 0.2s ease;
+    /* transition: 0.2s ease; */
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
     font-weight: 700;
@@ -642,7 +607,7 @@
     color: white;
     font-size: 25px;
     cursor: pointer;
-    transition: 0.2s ease;
+    /* transition: 0.2s ease; */
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
     font-weight: 700;
@@ -692,7 +657,7 @@
     font-weight: 700;
     border-radius: 50px;
     text-decoration: none;
-    transition: 0.2s;
+    /* transition: 0.2s; */
     margin-top: 20px;
 }
 .join-cta-btn:hover {

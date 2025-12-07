@@ -144,10 +144,10 @@
     width: 160px;
     cursor: pointer;
     filter: drop-shadow(0 0 0 rgba(0,0,0,0.2));
-    transition: transform 1.0s ease;
+    transition: 0.2s ease-in-out;
 }
 /* .floating-store:hover {
-    transform: scale(1.00);
+    transform: scale(1.01);
 } */
  
 /* ------------------------------------------
@@ -317,7 +317,7 @@
     height: 50px;
     position: absolute;
     top: 30px;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.1s ease;
 }
 .label-problem,
 .problem-icon {
@@ -359,7 +359,7 @@
     width: 75%;
     line-height: 1.35;
     text-align: center;
-    transition: opacity 0.2s ease, color 0.2s ease;
+    transition: opacity 0.1s ease, color 0.1s ease;
     font-family: "Work Sans", sans-serif;
     font-weight: 100;
     font-size: 20px;
@@ -389,7 +389,7 @@
 
 /* HOVER HINT ANIMATION */
 .problems-solutions-card::after {
-    transition: opacity 0.3s ease, color 0.3s ease;
+    transition: opacity 0.2s ease, color 0.2s ease;
     content: "Hover to see solution";
     width: 250px;
     position: absolute;
@@ -400,7 +400,7 @@
     font-weight: 100;
     color: white;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.1s ease;
     pointer-events: none;
 }
 .problems-solutions-card.hover-hint::after {
@@ -516,7 +516,7 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transition: opacity 0.15s ease;
+    transition: opacity 0.1s ease;
 }
 .arrow .default-icon { opacity: 1; }
 .arrow .hover-icon   { opacity: 0; }
@@ -594,7 +594,7 @@
 }
 .slides {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
 }
 .dots {
     display: flex;
@@ -608,7 +608,7 @@
     background: #004000;
     border-radius: 50%;
     cursor: pointer;
-    transition: background 0.25s;
+    transition: background 0.1s;
 }
 .dot.active {
     background: #FFB300;
@@ -640,7 +640,7 @@
     top: 0;
     left: 0;
     opacity: 0;
-    transition: opacity 0.35s ease;
+    transition: opacity 0.4s ease;
 }
 .phone-screen.active {
     opacity: 1;
@@ -667,7 +667,7 @@
     border-radius: 25px;
     cursor: pointer;
     text-align: left;
-    transition: 0.25s ease;
+    transition: 0.2s ease;
     /* box-shadow: 0 0 15px rgba(0,0,0,0.2); */
 }
 .bubble h3 {
@@ -730,7 +730,7 @@
     color: white;
     font-size: 25px;
     cursor: pointer;
-    transition: 0.2s ease;
+    transition: 0.1s ease;
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
     font-weight: 700;
@@ -886,7 +886,6 @@
     opacity: 0;
     transform: translateX(60px);
     animation: slideInLeft 0.8s ease forwards;
-    animation-delay: 0s;
 }
 .download-buttons img {
     width: 140px;
