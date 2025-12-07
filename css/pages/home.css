@@ -148,7 +148,7 @@
 .cta-row .cta-column p {
     font-family: "Work Sans", sans-serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     color: #004000;
 }
 .cta-card:link {
@@ -250,7 +250,7 @@
 /* FOOD SCORING DIAGRAM */
 .scoring-wrapper {
     position: relative;
-    width: 1000px;
+    width: 1050px;
     height: 400px; 
 }
 .food-scoring-box h1 {
@@ -546,7 +546,7 @@
     font-family: "Inter", sans-serif;
     font-size: 25px;
     font-weight: 600;
-    color: #FFB300;
+    color: #004000;
 }
 .feature-item h2 {
     margin-top: -10px;
