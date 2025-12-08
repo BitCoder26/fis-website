@@ -122,13 +122,13 @@
     opacity: 0.25;
 }
 .img1 {
-    background-image: url("../../assets/images/home/app_ipad.jpg");
+    background-image: url("../../assets/images/home/app_ipad.webp");
 }
 .img2 {
-    background-image: url("../../assets/images/home/scan_food.jpg");
+    background-image: url("../../assets/images/home/scan_food.webp");
 }
 .img3 {
-    background-image: url("../../assets/images/home/shared_meal.jpg");
+    background-image: url("../../assets/images/home/shared_meal.webp");
 }
 .cta-row {
     display: flex;
