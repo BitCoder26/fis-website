@@ -13,7 +13,7 @@
 
 .fis-container {
     background-color: #e7ebe8;
-    height: 512px;
+    height: 530px;
     margin-top: -50px;
     margin-bottom: 50px;
 }
@@ -24,14 +24,15 @@
     height: 100%;
 }
 .fis-image {
-    width: 57%;
+    width: 58%;
     height: 100%;
+    overflow: hidden;
 }
 .fis-image img {
     width: 100%;
 }
 .fis-text-column {
-    width: 50%;
+    width: 42%;
     display: flex;
     flex-direction: column;
 }
@@ -62,6 +63,7 @@
     color: #004000;
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 0px;
 }
 /* icon shadow */
 .icon-shadow {
