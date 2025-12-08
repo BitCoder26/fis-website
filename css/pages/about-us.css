@@ -11,58 +11,56 @@
     font-size: 20px;
 }
 
-.vision-mission .row {
-    margin: 50px 0;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    gap: 100px;
+.fis-container {
+    background-color: #e7ebe8;
+    height: 512px;
+    margin-top: -50px;
+    margin-bottom: 50px;
 }
-.vision-mission .vision,
-.vision-mission .mission,
-.vision-mission .values {
-    margin-top: -30px;
+.fis-row {
     display: flex;
-    text-align: left;
-    align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.fis-image {
+    width: 57%;
+    height: 100%;
+}
+.fis-image img {
+    width: 100%;
+}
+.fis-text-column {
     width: 50%;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
-.vision-mission .title-row {
+.fis-logo-container {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 8px; 
-    width: 100%;
+    justify-content: center;
+    text-align: center;
 }
-.vision-mission .title-row h1 {
-    margin-top: 35px;
+.fis-text-column img {
+    margin-top: 40px;
+    width: 150px;
+    height: 150px;
 }
-.vision-mission .title-row img {
-    margin-right: 10px;
-    width: 50px;
-    height: 50px;
-}
-.vision-mission h1 {
-    font-family: "Work Sans", sans-serif;
+.fis-text-column h2 {
     font-size: 30px;
-    font-weight: 800;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
     color: #004000;
-    text-align: left;
-    align-items: center;
+    margin-left: 50px;
 }
-.vision-mission p {
-    margin-top: 30px;
-    font-family: "Work Sans", sans-serif;
+.fis-text-column p {
     font-size: 20px;
+    font-family: "Work Sans", sans-serif;
     font-weight: 100;
     color: #004000;
-    text-align: left;
-    align-items: center;
-}
-.vision-mission b {
-    font-weight: 500;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 /* icon shadow */
 .icon-shadow {
@@ -98,7 +96,6 @@
     border-radius: 50px;
     padding: 18px 35px;
     color: white;
-    font-size: 25px;
     cursor: pointer;
     transition: 0.1s ease;
     font-size: 20px;
