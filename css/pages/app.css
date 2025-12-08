@@ -2,15 +2,12 @@
 ------------------ HERO 
 ---------------------------------------------*/
 .big-title {
-  font-size: 60px; /* whatever you use */
   display: inline-flex;
-  align-items: center;
 }
 
 .inline-icon {
   display: inline-flex;
-  align-items: center;
-  margin: 0 -3px 5px -3px;
+  margin: -3px -3px 0 -3px;
 }
 
 .inline-icon img {
