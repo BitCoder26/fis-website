@@ -1,24 +1,101 @@
 /* ------------------------------------------
 -------------- HEADER: JOIN US 
 ---------------------------------------------*/
-.join-us {
+.join-us-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.join-us-container {
+    width: 68%;
     line-height: 1.2;
     margin-bottom: 40px;
-    /* padding-left: 50px; */
     margin-bottom: 100px;
 }
-.join-us h2 {
+.join-us-container h2 {
     font-size: 30px;
     font-weight: 800;
     font-family: "Inter", sans-serif;
     color: #004000;
     margin-bottom: 0px;
 }
-.join-us p {
+.join-us-container p {
     font-size: 20px;
     font-weight: 100;
     font-family: "Work Sans", sans-serif;
     color: #004000;
+}
+.share-owner-offer-card {
+    background-color: #e7ebe8;
+    width: 32%;
+    height: 100%;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    animation: slideInRight 1.5s ease forwards;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;  
+}
+.share-owner-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.share-owner-image img {
+    width: 50px;
+    height: 50px;
+}
+.share-owner-title-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.share-owner-offer-card h1 {
+    font-size: 25px;
+    font-weight: 900;
+    font-family: "Inter", sans-serif;
+    color: #004000;
+}
+.limited-time-offer-box {
+    background-color: #ffb300;
+    border-radius: 25px 25px 0 0;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    margin-bottom: 20px;
+}
+.limited-time-offer-box h1 {
+    font-weight: 900;
+    font-size: 25px;
+    color: #004000;
+    margin-bottom: 30px;
+}
+.offer-wrapper {
+    padding: 0 10px 30px 30px;
+}
+.share-owner-offer-card p {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: "Work Sans", sans-serif;
+    color: #004000;
+}
+.share-owner-learn-more-up {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    margin-top: 10px;
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 /* ------------------------------------------
@@ -36,6 +113,7 @@
     transition: top 0.7s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     font-family: "Inter", sans-serif;
+    
 }
 .banner-content {
     color: #004000;
@@ -47,9 +125,9 @@
     align-items: center;
     gap: 20px;
 }
-.banner-btn {
+.learn-more-btn {
     background: #004000;
-    padding: 15px 30px;
+    padding: 18px 30px;
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
@@ -57,7 +135,7 @@
     border-radius: 40px;
     white-space: nowrap;
 }
-.banner-btn:hover {
+.learn-more-btn:hover {
     color: #004000;
     background: #ffb300;
 }
@@ -183,14 +261,13 @@
     font-weight: 900;
     color: #004000
 }
-.card-content .cost {
+.cost {
     text-align: center;
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
     font-weight: 500;
     color: #004000
 }
-
 .card-content p {
     text-align: center;
     font-size: 17px;
@@ -199,7 +276,7 @@
     color: #004000;
     line-height: 1.4;
 }
-.card-content .bigger-cost {
+.bigger-cost {
     font-size: 25px;
     color: #ffb300;
     font-weight: 900;

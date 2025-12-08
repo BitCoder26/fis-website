@@ -1,12 +1,12 @@
-window.addEventListener("load", () => {
-    const banner = document.getElementById("shareOwnerBanner");
-    const closeBtn = document.getElementById("bannerClose");
+// window.addEventListener("load", () => {
+//     const banner = document.getElementById("shareOwnerBanner");
+//     const closeBtn = document.getElementById("bannerClose");
 
-    setTimeout(() => {
-        banner.style.top = "0"; 
-    }, 400);
+//     setTimeout(() => {
+//         banner.style.top = "0"; 
+//     }, 400);
 
-    closeBtn.addEventListener("click", () => {
-        banner.style.top = "-120px";
-    });
-});
+//     closeBtn.addEventListener("click", () => {
+//         banner.style.top = "-120px";
+//     });
+// });
