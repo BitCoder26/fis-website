@@ -1,18 +1,24 @@
 /* ------------------------------------------
 ------------------ HERO 
 ---------------------------------------------*/
-.hero-left {
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
+.big-title {
+  font-size: 60px; /* whatever you use */
+  display: inline-flex;
+  align-items: center;
 }
-.hero-left img {
-    margin-left: -3px;
-    margin-right: -3px;
-    width: 30px;
-    height: 30px;
-    margin-top: 18px;
+
+.inline-icon {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 -3px 5px -3px;
 }
+
+.inline-icon img {
+  height: 0.9em;
+  width: auto;
+  vertical-align: middle;
+}
+
 
 
 /* ------------------------------------------
