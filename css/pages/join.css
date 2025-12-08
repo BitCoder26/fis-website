@@ -26,6 +26,8 @@
     color: #004000;
 }
 .share-owner-offer-card {
+    margin-top: 10px;
+    margin-bottom: -10px;
     background-color: #e7ebe8;
     width: 32%;
     height: 100%;
