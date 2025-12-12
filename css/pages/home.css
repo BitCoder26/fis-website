@@ -351,22 +351,22 @@
 }
 .food-icon {
     position: absolute;
-    top: 65%;
-    left: 62%;
+    top: 69%;
+    left: 60%;
     transform: translate(-50%, -90%);
-    width: 170px;
+    width: 220px;
 }
 .healthy-icon {
     position: absolute;
-    top: 75%;
-    left: 34%;
+    top: 71%;
+    left: 32%;
     transform: translate(-50%, -90%);
-    width: 180px;
+    width: 130px;
 }
 .arrow-icon {
     position: absolute;
-    top: 40%;
-    left: 41%;
+    top: 39%;
+    left: 39%;
     transform: translate(-50%, -90%);
     width: 100px;
     transform: rotate(-10deg);
@@ -429,6 +429,29 @@
     font-weight: 100;
     color: #004000;
 }
+
+/* ------------------------------------------
+------------- COMPARE PRICES
+---------------------------------------------*/
+.price-comparison-graphic {
+    width: 900px;
+}
+
+/* ------------------------------------------
+------------- SHOP SMARTER
+---------------------------------------------*/
+.shop-smarter-graphic {
+    width: 800px;
+    margin-left: 200px;
+}
+
+/* ------------------------------------------
+------------- COMPARE PRICES
+---------------------------------------------*/
+.cook-easy-graphic {
+    width: 700px;
+}
+
 
 /* ------------------------------------------
 ------------- MY NEIGHBOURHOOD
