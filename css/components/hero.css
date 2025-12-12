@@ -78,3 +78,27 @@
     font-family: "IBM Plex Mono", monospace;
     font-size: 18px;
 }
+
+
+
+/* ---------- MOBILE HERO FIX ---------- */
+@media (max-width: 768px) {
+
+    .hero-content {
+        margin-left: 30px;
+        margin-right: 30px;
+        justify-content: flex-start;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-left h1 {
+        text-align: left;
+    }
+
+    .hero-right {
+        display: none;
+    }
+}

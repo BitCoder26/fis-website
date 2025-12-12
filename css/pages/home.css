@@ -1,3 +1,29 @@
+/* ===== RESPONSIVE VISIBILITY HELPERS ===== */
+.hide-mobile {
+    display: block;
+}
+
+.hide-desktop {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+
+    .hide-desktop {
+        display: block !important;
+    }
+}
+/* .mobile-feature-list {
+    padding-left: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    color: #004000;
+} */
+
+
 /* ------------------------------------------
 --------------------- HERO 
 ---------------------------------------------*/
@@ -63,6 +89,7 @@
     margin-top: 45px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -642,7 +669,7 @@
     height: 100%;
 }
 /* feature icon shadow */
-.feature-shadow {
+/* .feature-shadow {
     position: absolute;
     bottom: 30px;
     left: 6%;
@@ -653,7 +680,7 @@
     filter: blur(8px);
     border-radius: 50%;
     z-index: 0;
-}
+} */
 .row-buttons {
     display: flex;
     justify-content: space-between; 
@@ -806,3 +833,8 @@
 .text-bold {
     font-weight: 500;
 }
+
+
+/* * {
+  outline: 1px solid red;
+} */
