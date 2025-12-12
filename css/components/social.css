@@ -88,3 +88,17 @@
 .icon.linkedin:hover {
     background-image: url("../../assets/icons/social/linkedin_orange.svg");
 }
+
+/*
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@ MOBILE @@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+@media (max-width: 768px) {
+    .social-section {
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

@@ -427,11 +427,8 @@
 @@@@@@@@@@@@@@@@@@@@@ MOBILE @@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 */
-
-
 @media (max-width: 768px) {
     /* ---------- GENERAL ---------- */
-    /* Prevent horizontal scroll everywhere */
     html, body {
         overflow-x: hidden;
     }
@@ -444,6 +441,9 @@
     }
     .share-owner-banner {
         display: none !important;
+    }
+    p {
+        font-weight: 200;
     }
 
     /* ---------- JOIN US SECTION ---------- */
