@@ -314,7 +314,7 @@ form textarea:focus,
 }
 /* FORCE inline layout for radio labels */
 form label.radio-label {
-    display: inline-flex !important;
+    display: flex !important;
     align-items: center;
     gap: 6px;
     margin-top: 12px;
