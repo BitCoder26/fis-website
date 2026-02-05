@@ -347,3 +347,11 @@ form label.checkbox-label {
     opacity: 1 !important;
     margin-right: 6px;
 }
+
+/* Make the RULES link orange */
+.form-wrapper a[href*="assets/documents/rules.pdf"]:link,
+.form-wrapper a[href*="assets/documents/rules.pdf"]:visited,
+.form-wrapper a[href*="assets/documents/rules.pdf"]:hover,
+.form-wrapper a[href*="assets/documents/rules.pdf"]:active {
+    color: #ffb300 !important;
+}
