@@ -11,6 +11,9 @@
         gtag('config', 'G-1NH16WM953');
     </script>
 
+    <!-- Cloudfare -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
     <meta charset="UTF-8" />
     <title>Food Investor's Society</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -139,7 +142,10 @@
                 not a protected investment and you may lose some or all of the money you invest.
 
             </p>
-            <form action="/submit-membership" method="POST">
+            <form action="http://127.0.0.1:8000/api/membership/submit-membership/" method="POST" enctype="multipart/form-data">
+
+                <input type="hidden" name="turnstile_token" id="turnstile_token">
+                <input type="hidden" name="membership_plan" value="PIONEER_SHARE_OWNER">
 
                 <!-- /////////////////////////////////////////////
                 ////////////// 1. PERSONAL DETAILS 
@@ -171,7 +177,7 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email"><b>Email Address</b><i> (required)</i></label>
-                        <input type="text" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="phone"><b>Phone Number</b><i> (optional)</i></label>
@@ -182,20 +188,20 @@
                 <!-- preferred contact method -->
                 <p><b>Preferred Contact Method:</b></p>
             
-                <div>
+                <label class="radio-label">
                     <input type="radio" id="contact-email" name="contact-method" value="email" required>
-                    <label for="contact-email">Email</label>
-                </div>
+                    Email
+                </label>
 
-                <div>
+                <label class="radio-label">
                     <input type="radio" id="contact-post" name="contact-method" value="post">
-                    <label for="contact-post">Post</label>
-                </div>
+                    Post
+                </label>
 
-                <div>
+                <label class="radio-label">
                     <input type="radio" id="contact-phone" name="contact-method" value="phone">
-                    <label for="contact-phone">Phone</label>
-                </div>
+                    Phone
+                </label>
 
                 <br><br>
 
@@ -212,11 +218,11 @@
 
                 <!-- declaration 1 -->
                 <p><b>Do you have any current or past affiliations that may represent a potential conflict of interest?</b></p>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="conflict-of-interest" value="no" required>
                     No, I have no relevant affiliations.
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="conflict-of-interest" value="yes">
                     Yes (please provide details below):
                 </label>
@@ -328,7 +334,7 @@
                 <!-- Investment amount: -->
                 <p><b>Investment amount:</b></p>
                 <label for="investment-amount">Enter total amount you wish to invest (£):</label>
-                <input type="text" id="investment-amount" name="investment-amount" required>
+                <input type="number" id="investment-amount" name="investment-amount" required min="25" max="20000" step="1" inputmode="numeric">
                 
                 <label>
                     <input type="checkbox" name="own-funds-confirmation" required> 
@@ -337,11 +343,11 @@
 
                 <!-- payment method -->
                 <p><b>Payment method:</b></p>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="payment-method" value="online" required> 
                     Online Payment (secure link)
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="payment-method" value="direct-bank-transfer"> 
                     Direct Bank Transfer
                 </label>
@@ -386,7 +392,7 @@
 
                 <label for="ethnicity"><b>Ethnic Background:</b></label>
                 <select id="ethnicity" name="ethnicity">
-                    <option value="" selected>Select an option</option>
+                    <option value="" disabled selected>Select an option</option>
 
                     <option value="white">White</option>
                     <option value="mixed">Mixed or Multiple Ethnic Groups</option>
@@ -398,19 +404,19 @@
 
                 <!-- Only filled if “Other” is selected -->
                 <label for="ethnicity-other" class="ethnicity-other-label">If other, please specify</label>
-                <input type="text" id="ethnicity-other" name="ethnicity-other">
+                <input type="text" id="ethnicity-other" name="ethnicity-other" disabled>
 
                 <!-- disability -->
                 <label><b>Do you consider yourself to have a disability or long-term health condition?</b></label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" value="yes" name="disability">
                     Yes
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" value="no" name="disability">
                     No
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" value="prefer-not-to-say" name="disability">
                     Prefer not to say
                 </label>
@@ -426,11 +432,11 @@
                 <br><br><br>
 
                 <!-- ///////////////////////////////////////////////
-                ///////////// 8. SIGNATURE (Required) 
+                ///////////// 10. SIGNATURE (Required) 
                 ///////////////////////////////////////////////// -->
-                <h3><b>8. Signature</b><i> <span class="required">(required)</span></i></h3>
-                <label for="signature"><b>Digital Signature (type full name)</b></label>
-                <textarea id="signature" name="signature" rows="1" required></textarea>
+                <h3><b>10. Signature</b><i> <span class="required">(required)</span></i></h3>
+                <label for="digital-signature"><b>Digital Signature (type full name)</b></label>
+                <input type="text" id="digital-signature" name="digital-signature" required>
             
                 <!-- date -->
                 <label for="date"><b>Date:</b></label>
@@ -438,29 +444,11 @@
 
                 <br><br>
 
-                <!-- ///////////////////////////////////////////////
-                //// 9. OFFICE USE ONLY (hidden admin section) 
-                ///////////////////////////////////////////////// -->
-                <div class="admin-only">
-                    <h3>Office Use Only</h3>
-
-                    <label>Membership ID (auto-generated):</label>
-                    <input type="text" name="membership-id" readonly>
-
-                    <label>Date Approved (auto-generated):</label>
-                    <input type="date" name="date-approved" readonly>
-
-                    <label>Investment Recorded (£):</label>
-                    <input type="number" name="investment-recorded" min="£25" step="0.01">
-
-                    <label>Membership Type:</label>
-                    <input type="text" name="membership-type" value="Annual Individual" readonly>
-
-                    <label>Entered in Register By (Name, Date):</label>
-                    <input type="text" name="entered-by">
+                <!-- Cloudfare turnstile -->
+                <div class="cf-turnstile"
+                    data-sitekey="0x4AAAAAACXo-XvqKsQcnMCn"
+                    data-callback="onTurnstileSuccess">
                 </div>
-
-                <br><br>
 
                 <!-- ///////////////////////////////////////////////
                 /////////// SUBMIT + REDIRECT TO PAYMENT 
@@ -525,6 +513,52 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function onTurnstileSuccess(token) {
+            document.getElementById("turnstile_token").value = token;
+        }
+    </script>
+
+    <script>
+        const conflictYes = document.querySelector('input[name="conflict-of-interest"][value="yes"]');
+        const conflictNo  = document.querySelector('input[name="conflict-of-interest"][value="no"]');
+        const details = document.getElementById("conflict-details");
+
+        function syncConflictDetails() {
+            if (!conflictYes || !conflictNo || !details) return;
+            const yes = conflictYes.checked;
+            details.required = yes;
+            details.disabled = !yes;
+            if (!yes) details.value = "";
+        }
+
+        conflictYes.addEventListener("change", syncConflictDetails);
+        conflictNo.addEventListener("change", syncConflictDetails);
+        syncConflictDetails();
+    </script>
+
+    <script>
+        const ethnicity = document.getElementById("ethnicity");
+        const ethnicityOther = document.getElementById("ethnicity-other");
+        const ethnicityOtherLabel = document.querySelector(".ethnicity-other-label");
+
+        function syncEthnicityOther() {
+            if (!ethnicity || !ethnicityOther) return;
+
+            const on = ethnicity.value === "other";
+            ethnicityOther.disabled = !on;
+            ethnicityOther.required = on;
+
+            if (ethnicityOtherLabel) {
+            ethnicityOtherLabel.style.display = on ? "block" : "none";
+            }
+            if (!on) ethnicityOther.value = "";
+        }
+
+        if (ethnicity) ethnicity.addEventListener("change", syncEthnicityOther);
+        syncEthnicityOther();
+    </script>
 
 </body>
 </html>

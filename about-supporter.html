@@ -11,6 +11,9 @@
         gtag('config', 'G-1NH16WM953');
     </script>
 
+    <!-- Cloudfare -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
     <meta charset="UTF-8" />
     <title>Supporter Sign-Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -111,7 +114,7 @@
                             <br>&nbsp;&nbsp;&nbsp;&nbsp;where appropriate<br>
                             ✓ Society news and invitations to events<br>
                             ✓ A visible way to demonstrate your alignment
-                            <br>&nbsp;&nbsp;&nbsp;&nbsp;with our mission and values"<br>
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;with our mission and values<br>
                         </p>
                     </div>
                 </div>
@@ -129,7 +132,10 @@
                 your commitment to reshaping the UK's food environment. Please note, Supporters
                 are <b>not Society members</b> and do not hold shares or voting rights.
             </p>
-            <form action="/submit-membership" method="POST">
+            <form action="http://127.0.0.1:8000/api/membership/submit-membership/" method="POST" enctype="multipart/form-data">
+
+                <input type="hidden" name="turnstile_token" id="turnstile_token">
+                <input type="hidden" name="membership_plan" value="SUPPORTER">
 
                 <!-- /////////////////////////////////////////////
                 ////////////// 1. ORGANISATION DETAILS 
@@ -142,11 +148,11 @@
 
                 <!-- Registered Address -->
                 <label for="registered-address"><b>Registered Address</b> <i>(optional)</i></label>
-                <input type="text" id="registered-address" name="registered-address" required>
+                <input type="text" id="registered-address" name="registered-address">
 
                 <!-- Postcode -->
                 <label for="postcode"><b>Postcode</b><i> (optional)</i></label>
-                <input type="text" id="postcode" name="postcode" required>
+                <input type="text" id="postcode" name="postcode">
 
                 <!-- Website/social media -->
                 <label for="website-social"><b>Website or Social Media Handle </b><i>(optional)</i></label>
@@ -181,7 +187,7 @@
                 <label class="radio-label">
                     <input type="radio" name="org-type" value="other">
                     Other:
-                    <input type="text" name="other-org-type" min="1" class="other-input">
+                    <input type="text" id="other-org-type" name="other-org-type" class="other-input" disabled>
                 </label>
 
                 <!-- Company/charity number -->
@@ -201,12 +207,12 @@
                 <!-- name + surname -->
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="first-name"><b>First Name</b></label>
-                        <input type="text" id="first-name" name="first-name" required>
+                        <label for="primary-first-name"><b>First Name</b></label>
+                        <input type="text" id="primary-first-name" name="primary-first-name" required>
                     </div>
                     <div class="form-group">
-                        <label for="surname"><b>Surname</b></label>
-                        <input type="text" id="surname" name="surname" required>
+                        <label for="primary-surname"><b>Surname</b></label>
+                        <input type="text" id="primary-surname" name="primary-surname" required>
                     </div>
                 </div>
 
@@ -216,7 +222,7 @@
 
                 <!-- Email Address -->
                 <label for="email"><b>Email Address:</b></label>
-                <input type="text" id="email" name="email">
+                <input type="email" id="email" name="email" required>
 
                 <!-- Phone Number -->
                 <label for="phone"><b>Phone Number:</b> <i>(optional)</i></label>
@@ -255,12 +261,12 @@
                 <textarea id="mission-statement" name="mission-statement" rows="4"></textarea>
 
                 <!-- Tell us briefly what your organisation does and who you support -->
-                <label for="org-alignment-with-fis"><b>Tell us briefly what your organisation does and who you support:</b></label>
-                <textarea id="org-alignment-with-fis" name="org-alignment" rows="4"></textarea>
+                <label for="org-what-you-do"><b>Tell us briefly what your organisation does and who you support:</b></label>
+                <textarea id="org-what-you-do" name="org-what-you-do" rows="4"></textarea>
                 
                 <!-- How does your work align with a fairer, better food future? -->
-                <label for="org-alignment-with-fis"><b>How does your work align with a fairer, better food future?</b></label>
-                <textarea id="org-alignment-with-fis" name="org-alignment" rows="4"></textarea>
+                <label for="org-alignment"><b>How does your work align with a fairer, better food future?</b></label>
+                <textarea id="org-alignment" name="org-alignment" rows="4"></textarea>
 
                 <br><br>
 
@@ -303,7 +309,7 @@
                     <div class="drop-zone" id="drop-zone">
                         <p>Drop files here or <span class="select-btn" id="selectBtn">Select files</span></p>
                         <p class="max-size">Max. file size: 50 MB.</p>
-                        <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.eps" hidden>
+                        <input type="file" id="fileInput" name="logo_file" accept=".png,.jpg,.jpeg,.eps" hidden>
                     </div>
 
                     <div id="fileInfo"></div>
@@ -330,7 +336,8 @@
                     <input type="radio" name="conflict-of-interest" value="yes">
                     Yes (please provide details below):
                 </label>
-                <textarea id="conflict-details" name="conflict-details" rows="4"></textarea>
+                <label for="conflict-details">If yes, please describe:</label>
+                <textarea id="conflict-details" name="conflict-details" rows="4" disabled></textarea>
                 
                 <!-- declaration 2 -->
                 <p><b>Declaration:</b></p>
@@ -418,23 +425,10 @@
 
                 <br><br>
 
-                <!-- ///////////////////////////////////////////////
-                //// 11. OFFICE USE ONLY (hidden admin section) 
-                ///////////////////////////////////////////////// -->
-                <div class="admin-only">
-                    <h3>Office Use Only</h3>
-
-                    <label>Supporter ID (auto-generated):</label>
-                    <input type="text" name="membership-id" readonly>
-
-                    <label>Date Approved (auto-generated):</label>
-                    <input type="date" name="date-approved" readonly>
-
-                    <label>Membership Type:</label>
-                    <input type="text" name="membership-type" value="Non-Member" readonly>
-
-                    <label>Entered in Register By (Name, Date):</label>
-                    <input type="text" name="enteredby">
+                <!-- Cloudfare turnstile -->
+                <div class="cf-turnstile"
+                    data-sitekey="0x4AAAAAACXo-XvqKsQcnMCn"
+                    data-callback="onTurnstileSuccess">
                 </div>
 
                 <!-- ///////////////////////////////////////////////
@@ -498,6 +492,50 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function onTurnstileSuccess(token) {
+            document.getElementById("turnstile_token").value = token;
+        }
+    </script>
+
+    <script>
+        const conflictYes = document.querySelector('input[name="conflict-of-interest"][value="yes"]');
+        const conflictNo  = document.querySelector('input[name="conflict-of-interest"][value="no"]');
+        const details = document.getElementById("conflict-details");
+
+        function syncConflictDetails() {
+            if (!conflictYes || !conflictNo || !details) return;
+            const yes = conflictYes.checked;
+            details.required = yes;
+            details.disabled = !yes;
+            if (!yes) details.value = "";
+        }
+
+        conflictYes.addEventListener("change", syncConflictDetails);
+        conflictNo.addEventListener("change", syncConflictDetails);
+        syncConflictDetails();
+    </script>
+
+    <script>
+        const orgTypeOther = document.querySelector('input[name="org-type"][value="other"]');
+        const orgTypeOtherText = document.querySelector('input[name="other-org-type"]');
+
+        function syncOrgTypeOther() {
+            if (!orgTypeOther || !orgTypeOtherText) return;
+
+            const on = orgTypeOther.checked;
+            orgTypeOtherText.disabled = !on;
+            orgTypeOtherText.required = on;
+            if (!on) orgTypeOtherText.value = "";
+        }
+
+        document.querySelectorAll('input[name="org-type"]').forEach(r =>
+            r.addEventListener("change", syncOrgTypeOther)
+        );
+
+        syncOrgTypeOther();
+    </script>
 
 </body>
 </html>

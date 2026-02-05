@@ -11,6 +11,9 @@
         gtag('config', 'G-1NH16WM953');
     </script>
 
+    <!-- Cloudfare -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
     <meta charset="UTF-8" />
     <title>Strategic Partner Sign-Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -122,7 +125,7 @@
                         <p>
                             <b>•&nbsp;&nbsp;Duration:</b> 1 year (annual renewal)<br>
                             <b>•&nbsp;&nbsp;Fees:</b> £250<br>
-                            <b>•&nbsp;&nbsp;Share Capital:</b> Include a £1 member share<br>
+                            <b>•&nbsp;&nbsp;Share Capital:</b> Includes a £1 member share<br>
                             <b>•&nbsp;&nbsp;Share Status:</b> Non-transferable
                         </p>
                     </div>
@@ -139,7 +142,10 @@
                 Join The Food Investors Society as a Strategic Partner and collaborate on projects,         
                 campaigns, and research that drive real change across the UK food system.
             </p>
-            <form action="/submit-membership" method="POST">
+            <form action="http://127.0.0.1:8000/api/membership/submit-membership/" method="POST" enctype="multipart/form-data" enctype="multipart/form-data">
+
+                <input type="hidden" name="turnstile_token" id="turnstile_token">
+                <input type="hidden" name="membership_plan" value="STRATEGIC_PARTNER">
 
                 <!-- /////////////////////////////////////////////
                 ////////////// 1. ORGANISATION DETAILS 
@@ -164,34 +170,34 @@
 
                 <!-- Organisation Type: -->
                 <label><b>Organisation Type:</b></label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="org-type" value="limited-company" required>
                     Private Limited Company
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="org-type" value="public-company">
                     Public Limited Company
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="org-type" value="charity">
                     Charity
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="org-type" value="social-enterprise">
                     Social Enterprise / CIC
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="org-type" value="co-operative">
                     Co-operative
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="org-type" value="community-group">
                     Community Group
                 </label>           
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="org-type" value="other">
                     Other:
-                    <input type="text" name="other-org-type" min="1" class="other-input">
+                    <input type="text" name="other-org-type" class="other-input" disabled>
                 </label>
 
                 <!-- Company/charity number -->
@@ -228,7 +234,7 @@
 
                 <!-- Email Address -->
                 <label for="email"><b>Email Address:</b></label>
-                <input type="text" id="email" name="email">
+                <input type="email" id="email" name="email">
 
                 <!-- Phone Number -->
                 <label for="phone"><b>Phone Number:</b></label>
@@ -236,11 +242,11 @@
 
                 <!-- Preferred Contact Method -->
                 <label><b>Preferred Contact Method:</b></label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="preferred-contact-method" value="email" required>
                     Email
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="preferred-contact-method" value="phone">
                     Phone
                 </label>
@@ -274,34 +280,34 @@
 
                 <!-- Collab interested in? -->
                 <label><b>What type of collaboration are you most interested in?</b></label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="colab-interested-in" value="join-communication-campaigns" required>
                     Joint communication or events
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="colab-interested-in" value="research-partnerships">
                     Research partnerships
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="colab-interested-in" value="pilot-programmes-poc-trials">
                     Pilot programmes / proof-of-concept trials
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="colab-interested-in" value="sponsorship-funding-support">
                     Sponsorship or funding support
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="colab-interested-in" value="policy-advocacy-collaboration">
                     Policy or advocacy collaboration
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="colab-interested-in" value="staff-solunteering">
                     Staff volunteering / CSR initiatives
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="colab-interested-in" value="other">
                     Other:
-                    <input type="text" name="other-colab-interested-in" min="1" class="other-input">
+                    <input type="text" name="other-colab-interested-in" class="other-input" disabled>
                 </label>
                 
                 <br><br><br>
@@ -325,15 +331,15 @@
 
                 <!-- visibility preference -->
                 <label><b>Visibility preference</b></label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="visibility-preference" value="logo-profile" required>
                     Please include our logo and short profile on your website.
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="visibility-preference" value="logo-org-name">
                     Please include our logo and organisation name only.
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="visibility-preference" value="not-listed-yet">
                     We prefer not to be publicly listed at this time.
                 </label>
@@ -349,7 +355,7 @@
                     <div class="drop-zone" id="drop-zone">
                         <p>Drop files here or <span class="select-btn" id="selectBtn">Select files</span></p>
                         <p class="max-size">Max. file size: 50 MB.</p>
-                        <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.eps" hidden>
+                        <input type="file" id="fileInput" name="logo_file"  accept=".png,.jpg,.jpeg,.eps" hidden>
                     </div>
 
                     <div id="fileInfo"></div>
@@ -397,7 +403,7 @@
                 ////////////////////////////////////////////////-->
                 <h3>6. Partnership Commitment<i> <span class="required">(required)</span></i></h3>
                 <p>
-                    “As an Affiliate Partner, our organisation shares the values and mission of The Food
+                    “As a Strategic Partner, our organisation shares the values and mission of The Food
                     Investors Society Ltd and supports efforts to build a healthier, fairer, and more
                     sustainable food system. We agree to uphold the Society's values and abide by its
                     <u><b><a href="assets/documents/rules.pdf" target="_blank" rel="noopener noreferrer">RULES</a></b></u> 
@@ -516,32 +522,16 @@
 
                 <br><br>
 
-                <!-- ///////////////////////////////////////////////
-                //// 11. OFFICE USE ONLY (hidden admin section) 
-                ///////////////////////////////////////////////// -->
-                <div class="admin-only">
-                    <h3>Office Use Only</h3>
-
-                    <label>Membership ID (auto-generated):</label>
-                    <input type="text" name="membership-id" readonly>
-
-                    <label>Date Approved (auto-generated):</label>
-                    <input type="date" name="date-approved" readonly>
-
-                    <label>Payment Recorded (£250):</label>
-                    <input type="number" name="payment-recorded" value="250.00" readonly>
-
-                    <label>Membership Type:</label>
-                    <input type="text" name="membership-type" value="Annual Strategic Partner" readonly>
-
-                    <label>Entered in Register By (Name, Date):</label>
-                    <input type="text" name="enteredby">
+                <!-- Cloudfare turnstile -->
+                <div class="cf-turnstile"
+                    data-sitekey="0x4AAAAAACXo-XvqKsQcnMCn"
+                    data-callback="onTurnstileSuccess">
                 </div>
 
                 <!-- ///////////////////////////////////////////////
                 /////////// APPLY + REDIRECT TO PAYMENT (?)
                 ///////////////////////////////////////////////// -->
-                <button type="submit" class="submit-button">Apply as an Strategic Partner</button>
+                <button type="submit" class="submit-button">Apply as a Strategic Partner</button>
             </form>
         </section>
         
@@ -599,6 +589,77 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function onTurnstileSuccess(token) {
+            document.getElementById("turnstile_token").value = token;
+        }
+    </script>
+
+    <script>
+        const conflictYes = document.querySelector('input[name="conflict-of-interest"][value="yes"]');
+        const conflictNo  = document.querySelector('input[name="conflict-of-interest"][value="no"]');
+        const details = document.getElementById("conflict-details");
+
+        function syncConflictDetails() {
+            if (!conflictYes || !conflictNo || !details) return;
+            const yes = conflictYes.checked;
+            details.required = yes;
+            details.disabled = !yes;
+            if (!yes) details.value = "";
+        }
+
+        document.querySelectorAll('input[name="conflict-of-interest"]').forEach(r =>
+            r.addEventListener("change", syncConflictDetails)
+        );
+
+        syncConflictDetails();
+    </script>
+
+    <script>
+        const orgTypeOther = document.querySelector('input[name="org-type"][value="other"]');
+        const orgTypeOtherText = document.querySelector('input[name="other-org-type"]');
+
+        function syncOrgTypeOther() {
+            if (!orgTypeOther || !orgTypeOtherText) return;
+
+            const on = orgTypeOther.checked;
+            orgTypeOtherText.disabled = !on;
+            orgTypeOtherText.required = on;
+            if (!on) orgTypeOtherText.value = "";
+        }
+
+        document.querySelectorAll('input[name="org-type"]').forEach(r =>
+            r.addEventListener("change", syncOrgTypeOther)
+        );
+
+        syncOrgTypeOther();
+    </script>
+
+    <script>
+        const colabOther = document.querySelector('input[name="colab-interested-in"][value="other"]');
+        const colabOtherText = document.querySelector('input[name="other-colab-interested-in"]');
+
+        function syncColabOther() {
+            if (!colabOther || !colabOtherText) return;
+
+            const on = colabOther.checked;
+            colabOtherText.disabled = !on;
+            colabOtherText.required = on;
+            
+            if (on) {   
+                colabOtherText.focus();
+            } else {
+                colabOtherText.value = "";
+            }
+        }
+
+        document.querySelectorAll('input[name="colab-interested-in"]').forEach(r =>
+            r.addEventListener("change", syncColabOther)
+        );
+
+        syncColabOther();
+    </script>
 
 </body>
 </html>

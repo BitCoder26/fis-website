@@ -11,6 +11,9 @@
         gtag('config', 'G-1NH16WM953');
     </script>
 
+    <!-- Cloudfare -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
     <meta charset="UTF-8" />
     <title>Food Investor's Society</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -139,7 +142,10 @@
                 Join The Food Investors Society Ltd as an Affiliate Partner and work with us to
                 create a healthier, fairer, and more sustainable food future.
             </p>
-            <form action="/submit-membership" method="POST">
+            <form action="http://127.0.0.1:8000/api/membership/submit-membership/" method="POST" enctype="multipart/form-data" enctype="multipart/form-data">
+
+                <input type="hidden" name="turnstile_token" id="turnstile_token">
+                <input type="hidden" name="membership_plan" value="AFFILIATE_PARTNER">
 
                 <!-- /////////////////////////////////////////////
                 ////////////// 1. ORGANISATION DETAILS 
@@ -191,7 +197,7 @@
                 <label class="radio-label">
                     <input type="radio" name="org-type" value="other">
                     Other:
-                    <input type="text" name="other-org-type" min="1" class="other-input">
+                    <input type="text" name="other-org-type" class="other-input" disabled>
                 </label>
 
                 <!-- Company/charity number -->
@@ -228,7 +234,7 @@
 
                 <!-- Email Address -->
                 <label for="email"><b>Email Address:</b></label>
-                <input type="text" id="email" name="email">
+                <input type="email" id="email" name="email">
 
                 <!-- Phone Number -->
                 <label for="phone"><b>Phone Number:</b></label>
@@ -294,7 +300,7 @@
                 <label class="radio-label">
                     <input type="radio" name="colab-interested-in" value="other">
                     Other:
-                    <input type="text" name="other-colab-interested-in" min="1" class="other-input">
+                    <input type="text" name="other-colab-interested-in" class="other-input" disabled>
                 </label>
 
                 <br><br>
@@ -342,7 +348,7 @@
                     <div class="drop-zone" id="drop-zone">
                         <p>Drop files here or <span class="select-btn" id="selectBtn">Select files</span></p>
                         <p class="max-size">Max. file size: 50 MB.</p>
-                        <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.eps" hidden>
+                        <input type="file" id="fileInput" name="logo_file"  accept=".png,.jpg,.jpeg,.eps" hidden>
                     </div>
 
                     <div id="fileInfo"></div>
@@ -507,26 +513,10 @@
 
                 <br><br>
 
-                <!-- ///////////////////////////////////////////////
-                //// 11. OFFICE USE ONLY (hidden admin section) 
-                ///////////////////////////////////////////////// -->
-                <div class="admin-only">
-                    <h3>Office Use Only</h3>
-
-                    <label>Membership ID (auto-generated):</label>
-                    <input type="text" name="membership-id" readonly>
-
-                    <label>Date Approved (auto-generated):</label>
-                    <input type="date" name="date-approved" readonly>
-
-                    <label>Payment Recorded (50):</label>
-                    <input type="number" name="payment-recorded" value="50.00" readonly>
-
-                    <label>Membership Type:</label>
-                    <input type="text" name="membership-type" value="Annual Affiliate Partner" readonly>
-
-                    <label>Entered in Register By (Name, Date):</label>
-                    <input type="text" name="enteredby">
+                <!-- Cloudfare turnstile -->
+                <div class="cf-turnstile"
+                    data-sitekey="0x4AAAAAACXo-XvqKsQcnMCn"
+                    data-callback="onTurnstileSuccess">
                 </div>
 
                 <!-- ///////////////////////////////////////////////
@@ -590,6 +580,73 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function onTurnstileSuccess(token) {
+            document.getElementById("turnstile_token").value = token;
+        }
+    </script>
+
+    <script>
+        const conflictYes = document.querySelector('input[name="conflict-of-interest"][value="yes"]');
+        const conflictNo  = document.querySelector('input[name="conflict-of-interest"][value="no"]');
+        const details = document.getElementById("conflict-details");
+
+        function syncConflictDetails() {
+            if (!conflictYes || !conflictNo || !details) return;
+            const yes = conflictYes.checked;
+            details.required = yes;
+            details.disabled = !yes;
+            if (!yes) details.value = "";
+        }
+
+        document.querySelectorAll('input[name="conflict-of-interest"]').forEach(r =>
+            r.addEventListener("change", syncConflictDetails)
+        );
+        syncConflictDetails();
+    </script>
+
+    <script>
+        const orgTypeOther = document.querySelector('input[name="org-type"][value="other"]');
+        const orgTypeOtherText = document.querySelector('input[name="other-org-type"]');
+
+        function syncOrgTypeOther() {
+            if (!orgTypeOther || !orgTypeOtherText) return;
+
+            const on = orgTypeOther.checked;
+            orgTypeOtherText.disabled = !on;
+            orgTypeOtherText.required = on;
+
+            if (!on) orgTypeOtherText.value = "";
+        }
+
+        document.querySelectorAll('input[name="org-type"]').forEach(r =>
+            r.addEventListener("change", syncOrgTypeOther)
+        );
+
+        syncOrgTypeOther();
+    </script>
+
+    <script>
+        const colabOther = document.querySelector('input[name="colab-interested-in"][value="other"]');
+        const colabOtherText = document.querySelector('input[name="other-colab-interested-in"]');
+
+        function syncColabOther() {
+            if (!colabOther || !colabOtherText) return;
+
+            const on = colabOther.checked;
+            colabOtherText.disabled = !on;
+            colabOtherText.required = on;
+
+            if (!on) colabOtherText.value = "";
+        }
+
+        document.querySelectorAll('input[name="colab-interested-in"]').forEach(r =>
+            r.addEventListener("change", syncColabOther)
+        );
+
+        syncColabOther();
+    </script>
 
 </body>
 </html>

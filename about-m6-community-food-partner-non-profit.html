@@ -11,6 +11,9 @@
         gtag('config', 'G-1NH16WM953');
     </script>
 
+    <!-- Cloudfare -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
     <meta charset="UTF-8" />
     <title>Food Investor's Society</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -138,7 +141,10 @@
                 food projects, co-ops, and social enterprises working together for a healthier, fairer,
                 and more sustainable food future.
             </p>
-            <form action="/submit-membership" method="POST">
+            <form action="http://127.0.0.1:8000/api/membership/submit-membership/" method="POST" enctype="multipart/form-data" enctype="multipart/form-data">
+
+                <input type="hidden" name="turnstile_token" id="turnstile_token">
+                <input type="hidden" name="membership_plan" value="COMMUNITY_FOOD_NON_PROFIT_PARTNER">
 
                 <!-- /////////////////////////////////////////////
                 ////////////// 1. ORGANISATION DETAILS 
@@ -163,26 +169,26 @@
 
                 <!-- Organisation Type: -->
                 <label><b>Organisation Type:</b></label>
-                <label>
-                    <input type="radio" name="org-type" value="charity">
+                <label class="radio-label">
+                    <input type="radio" name="org-type" value="charity" required>
                     Charity
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="org-type" value="social-enterprise">
                     Social Enterprise / CIC
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="org-type" value="co-operative">
                     Co-operative
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="org-type" value="community-group">
                     Community Group
                 </label>           
                 <label>
                     <input type="radio" name="org-type" value="other">
                     Other:
-                    <input type="text" name="other-org-type" min="1" class="other-input">
+                    <input type="text" name="other-org-type" class="other-input" disabled>
                 </label>
 
                 <!-- Company/charity number -->
@@ -219,7 +225,7 @@
 
                 <!-- Email Address -->
                 <label for="email"><b>Email Address:</b></label>
-                <input type="text" id="email" name="email">
+                <input type="email" id="email" name="email" required>
 
                 <!-- Phone Number -->
                 <label for="phone"><b>Phone Number:</b></label>
@@ -227,11 +233,11 @@
 
                 <!-- Preferred Contact Method -->
                 <label><b>Preferred Contact Method:</b></label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="preferred-contact-method" value="email" required>
                     Email
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="preferred-contact-method" value="phone">
                     Phone
                 </label>
@@ -284,21 +290,21 @@
                     <b>As a member, you will:</b>
                 </p>
                 <ul>
-                    <li>Be <b>listed on the My FoodX Neighbourhood Map</b> and on our About Us - Supporters webpage.
-                    <li>You may also be featured in community spotlights or social media posts.
+                    <li>Be <b>listed on the My FoodX Neighbourhood Map</b> and on our About Us - Supporters webpage.</li>
+                    <li>You may also be featured in community spotlights or social media posts.</li>
                 </ul>
 
                 <!-- visibility preference -->
                 <label><b>Visibility preference</b></label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="visibility-preference" value="logo-profile" required>
                     Please include our logo and organisation name on your website.
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="visibility-preference" value="logo-org-name">
                     Please include our organisation name only.
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="visibility-preference" value="not-listed-yet">
                     We prefer not to be publicly listed at this time.
                 </label>
@@ -314,7 +320,7 @@
                     <div class="drop-zone" id="drop-zone">
                         <p>Drop files here or <span class="select-btn" id="selectBtn">Select files</span></p>
                         <p class="max-size">Max. file size: 50 MB.</p>
-                        <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.eps" hidden>
+                        <input type="file" id="fileInput" name="logo_file" accept=".png,.jpg,.jpeg,.eps" hidden>
                     </div>
 
                     <div id="fileInfo"></div>
@@ -334,11 +340,11 @@
 
                 <!-- declaration 1 -->
                 <p><b>Do you have any affiliations that may represent a potential conflict of interest?</b></p>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="conflict-of-interest" value="no" required>
                     No, none to declare.
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="conflict-of-interest" value="yes">
                     Yes (please provide details below):
                 </label>
@@ -449,23 +455,10 @@
 
                 <br><br>
 
-                <!-- ///////////////////////////////////////////////
-                //// 11. OFFICE USE ONLY (hidden admin section) 
-                ///////////////////////////////////////////////// -->
-                <div class="admin-only">
-                    <h3>Office Use Only</h3>
-
-                    <label>Membership ID (auto-generated):</label>
-                    <input type="text" name="membership-id" readonly>
-
-                    <label>Date Approved (auto-generated):</label>
-                    <input type="date" name="date-approved" readonly>
-
-                    <label>Membership Type:</label>
-                    <input type="text" name="membership-type" value="Annual Community Food Partner (non-profit)" readonly>
-
-                    <label>Entered in Register By (Name, Date):</label>
-                    <input type="text" name="enteredby">
+                <!-- Cloudfare turnstile -->
+                <div class="cf-turnstile"
+                    data-sitekey="0x4AAAAAACXo-XvqKsQcnMCn"
+                    data-callback="onTurnstileSuccess">
                 </div>
 
                 <!-- ///////////////////////////////////////////////
@@ -529,6 +522,51 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function onTurnstileSuccess(token) {
+            document.getElementById("turnstile_token").value = token;
+        }
+    </script>
+
+    <script>
+        const conflictYes = document.querySelector('input[name="conflict-of-interest"][value="yes"]');
+        const conflictNo  = document.querySelector('input[name="conflict-of-interest"][value="no"]');
+        const details = document.getElementById("conflict-details");
+
+        function syncConflictDetails() {
+            if (!conflictYes || !conflictNo || !details) return;
+            const yes = conflictYes.checked;
+            details.required = yes;
+            details.disabled = !yes;
+            if (!yes) details.value = "";
+        }
+
+        conflictYes.addEventListener("change", syncConflictDetails);
+        conflictNo.addEventListener("change", syncConflictDetails);
+        syncConflictDetails();
+    </script>
+
+    <script>
+        const orgTypeOther = document.querySelector('input[name="org-type"][value="other"]');
+        const orgTypeOtherText = document.querySelector('input[name="other-org-type"]');
+
+        function syncOrgTypeOther() {
+            if (!orgTypeOther || !orgTypeOtherText) return;
+
+            const on = orgTypeOther.checked;
+            orgTypeOtherText.disabled = !on;
+            orgTypeOtherText.required = on;
+            if (!on) orgTypeOtherText.value = "";
+        }
+
+        document.querySelectorAll('input[name="org-type"]').forEach(r =>
+            r.addEventListener("change", syncOrgTypeOther)
+        );
+
+        syncOrgTypeOther();
+    </script>
+
 
 </body>
 </html>
