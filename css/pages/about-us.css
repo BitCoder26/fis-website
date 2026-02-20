@@ -87,6 +87,18 @@
     bottom: 138px; 
 }
 
+.coop-marque {
+    justify-content: left;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.coop-marque img {
+    width: 130px;
+    height: 130px;
+}
+
 /* join button */
 .about-join-movement {
     margin-top: 50px;
@@ -146,6 +158,8 @@
     display: flex;
     gap: 32px;
     width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .founder-card {
     width: 25%;

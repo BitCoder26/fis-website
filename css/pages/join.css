@@ -336,7 +336,8 @@
     margin: 0;
 }
 .shared-button-box {
-    margin-top: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     display: flex;
     justify-content: center;
 }
