@@ -1,5 +1,8 @@
 const container = document.getElementById('product-container');
 
+// Counter
+const itemsCount = document.getElementById('items-count');
+
 // Filter elements
 const nutriFilter = document.getElementById('nutriFilter');
 const ecoFilter = document.getElementById('ecoFilter');
@@ -30,7 +33,7 @@ function renderCards(products) {
         const prodDiv = document.createElement('div');
         prodDiv.classList.add('foodx100-card');
 
-        // Add data attributes for filtering
+        // Add data attributes
         prodDiv.dataset.nutriscore = product.nutriscore_grade || '';
         prodDiv.dataset.ecoscore = product.environmental_score_grade || '';
         prodDiv.dataset.nova = product.nova_group || '';
@@ -46,7 +49,7 @@ function renderCards(products) {
         </div>
     `;
 
-        // Click to open modal with all details
+        // Modal click logic as before
         prodDiv.addEventListener('click', () => {
             modalBody.innerHTML = `
                 <h2>${product.product_name}</h2>
@@ -65,6 +68,9 @@ function renderCards(products) {
 
         container.appendChild(prodDiv);
     });
+
+    // Update counter
+    itemsCount.textContent = `${products.length} items shown`;
 }
 
 // Close modal
@@ -79,6 +85,8 @@ function applyFilters() {
     const superValue = superFilter.value;
 
     const cards = document.querySelectorAll('.foodx100-card');
+    let visibleCount = 0;
+
     cards.forEach(card => {
         const nutri = card.dataset.nutriscore || '';
         const eco = card.dataset.ecoscore || '';
@@ -92,7 +100,11 @@ function applyFilters() {
         if (superValue && sup.toString() !== superValue) hide = true;
 
         card.style.display = hide ? 'none' : 'flex';
+        if (!hide) visibleCount++;
     });
+
+    // Update counter
+    itemsCount.textContent = `${visibleCount} items shown`;
 }
 
 // Hook up filters

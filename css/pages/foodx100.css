@@ -1,10 +1,31 @@
+/* ===== VARIABLES ===== */
+:root {
+    --primary-color: #004000;
+    --badge-bg: #f0f0f0;
+    --hover-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-/* Center the whole product database section vertically */
+/* ===== GLOBAL ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* ===== DATABASE SECTION ===== */
 .database-container {
     display: block;
-    padding: 20px;
+    border-radius: 16px;
     box-sizing: border-box;
+    padding: 20px;
     text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .database-container h2 {
@@ -13,38 +34,37 @@
     font-weight: 800;
 }
 
-/* padding fix*/
 .foodx100-database {
-    padding: 0;       /* remove top/bottom padding */
-    margin: 0;        /* remove default margin */
-    width: 100%;      /* optional: make it full width */
-    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 .foodx100-database h2 {
-    margin-top: 0;    /* remove top margin */
-    margin-bottom: 10px; /* keep small gap if you want */
+    margin: 0 0 10px 0;
 }
-/* Individual card styling */
+
+#items-count {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* ===== PRODUCT CARDS ===== */
 .foodx100-card {
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     padding: 12px;
-    width: 160px;           /* smaller width to show more cards */
+    width: 160px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;               /* space between elements */
+    gap: 6px;
     transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.foodx100-badges {
-    display: flex;
-    justify-content: center;
-    gap: 4px;      /* space between badges */
-    flex-wrap: wrap; /* wrap if cards are very narrow */
 }
 
 .foodx100-card:hover {
@@ -52,27 +72,24 @@
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
-/* Image inside card */
 .foodx100-image {
     width: 100%;
-    height: 100px;          /* smaller height to fit more cards */
+    height: 100px;
     object-fit: contain;
     margin-bottom: 6px;
 }
 
-/* Product name */
 .foodx100-name {
     font-size: 14px;
     font-weight: 700;
     margin: 4px 0;
 }
 
-/* Horizontal row for Nutri, Eco, NOVA */
 .foodx100-badges {
     display: flex;
     justify-content: center;
-    gap: 4px;               /* small gap between badges */
-    flex-wrap: wrap;         /* wrap if needed for very small cards */
+    gap: 4px;
+    flex-wrap: wrap;
 }
 
 .foodx100-nutriscore,
@@ -82,12 +99,12 @@
     font-size: 12px;
     padding: 2px 6px;
     border-radius: 6px;
-    background-color: #f0f0f0;
-    color: #004000;
-    margin: 0;              /* remove vertical margin since now inline */
+    background-color: var(--badge-bg);
+    color: var(--primary-color);
+    margin: 0;
 }
 
-/* Scrollable product container */
+/* ===== SCROLLABLE CONTAINER ===== */
 #product-container {
     max-height: 400px;
     overflow-y: auto;
@@ -95,26 +112,24 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 0 20px; /* minimal horizontal padding */
+    padding: 0 20px;
     border-radius: 12px;
     background: #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* Modal overlay */
+/* ===== MODAL ===== */
 .modal {
-    display: none; /* hidden by default */
+    display: none;
     position: fixed;
     z-index: 1000;
-    left: 0;
-    top: 0;
+    left: 0; top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.6); /* dark overlay */
+    background-color: rgba(0,0,0,0.6);
 }
 
-/* Modal content box */
 .modal-content {
     background-color: #fff;
     margin: 10% auto;
@@ -125,7 +140,6 @@
     position: relative;
 }
 
-/* Close button */
 .close-btn {
     position: absolute;
     top: 15px;
@@ -135,6 +149,7 @@
     cursor: pointer;
 }
 
+/* ===== FILTER SECTION ===== */
 .filter-section {
     display: flex;
     flex-wrap: wrap;
@@ -152,4 +167,66 @@
     padding: 5px 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
+}
+
+/* ===== BE PART OF A BIGGER MISSION SECTION ===== */
+.foodx100-bigger-mission {
+    text-align: center;    
+}
+
+/* ===== BUTTONS ROW ===== */
+.buttons-row-foodx100 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.buttons-row-foodx100 > div {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.buttons-row-foodx100 a {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 0;
+}
+
+.become-founder-btn,
+.early-access-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.open-faq-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.buttons-row-foodx100 a:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--hover-shadow);
+}
+
+.newsletter-section {
+    text-align: center; 
+}
+
+.newsletter-section a {
+    display: inline-block;
+    margin: 8px 12px;      
+    text-decoration: none;
+    color: #ffb300;        
+    font-weight: 700;
 }
