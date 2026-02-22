@@ -16,7 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" href="assets/icons/favicon/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" /> 
+    <link rel="stylesheet" href="css/pages/foodx100.css" />
 </head>
 <body>
 
@@ -97,9 +98,57 @@
     <!-- FoodX100 Database -->
     <div class="database-container">
         <h2>Search the Food Database</h2>
-        <div class="foodx100-database">
-            <p>Add foodX100 database-backed search application</p>
+            <!-- Filter Section-->
+        <div class="filter-section">
+            <label for="nutriFilter">Nutriscore:</label>
+            <select id="nutriFilter">
+                <option value="">All</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+            </select>
+
+            <label for="ecoFilter">Ecoscore:</label>
+            <select id="ecoFilter">
+                <option value="">All</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+            </select>
+
+            <label for="novaFilter">NOVA Group:</label>
+            <select id="novaFilter">
+                <option value="">All</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+            <label for="superFilter">Supermarket:</label>
+            <select id="superFilter">
+                <option value="">All</option>
+                <option value="Tesco">Tesco</option>
+                <option value="Sainsbury's">Sainsbury's</option>
+                <option value="Waitrose">Waitrose</option>
+                <option value="Morrisons">Morrisons</option>
+            </select>
         </div>
+    <!-- END Filter Section -->
+        <div class="foodx100-database">
+            <div id="product-container"></div>
+
+            <!-- Modal container -->
+            <div id="product-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <div id="modal-body"></div>
+                </div>
+            </div>
         <!-- FAQ - Button --> 
         <div class="foodx100-faq">
             <a href="faq.html" class="open-faq-btn">Frequently Asked Questions</a>

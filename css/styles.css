@@ -40,6 +40,9 @@ Important: all the above html pages share a common css
 /* COOK */
 @import url("pages/cook.css");
 
+/* FOODX100 */
+@import url("pages/foodx100.css");
+
 /* JOIN US */
 @import url("pages/join.css");
 

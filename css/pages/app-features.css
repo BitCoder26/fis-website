@@ -109,7 +109,7 @@
     background-color: white;
     border-radius: 25px;
     box-shadow: 0 0px 20px rgba(0,0,0,0.2);
-    height: 800px;
+    height: flex;
     display: flex;
     flex-direction: column;
     justify-content: center;
