@@ -417,8 +417,8 @@
                 </select>
 
                 <!-- Only filled if “Other” is selected -->
-                <label for="ethnicity-other" class="ethnicity-other-label">If other, please specify</label>
-                <input type="text" id="ethnicity-other" name="ethnicity-other" disabled>
+                <label for="ethnicity-other" id="ethnicity-other-label" class="ethnicity-other-label" hidden>If other, please specify</label>
+                <input type="text" id="ethnicity-other" name="ethnicity-other" hidden disabled>
 
                 <!-- disability -->
                 <label><b>Do you consider yourself to have a disability or long-term health condition?</b></label>
@@ -555,24 +555,21 @@
     <script>
         const ethnicity = document.getElementById("ethnicity");
         const ethnicityOther = document.getElementById("ethnicity-other");
-        const ethnicityOtherLabel = document.querySelector(".ethnicity-other-label");
+        const ethnicityOtherLabel = document.getElementById("ethnicity-other-label");
 
         function syncEthnicityOther() {
-            if (!ethnicity || !ethnicityOther) return;
+            if (!ethnicity || !ethnicityOther || !ethnicityOtherLabel) return;
 
             const on = ethnicity.value === "other";
+            ethnicityOther.hidden = !on;
+            ethnicityOtherLabel.hidden = !on;
             ethnicityOther.disabled = !on;
             ethnicityOther.required = on;
-
-            if (ethnicityOtherLabel) {
-            ethnicityOtherLabel.style.display = on ? "block" : "none";
-            }
             if (!on) ethnicityOther.value = "";
         }
-
-        if (ethnicity) ethnicity.addEventListener("change", syncEthnicityOther);
+        ethnicity?.addEventListener("change", syncEthnicityOther);
         syncEthnicityOther();
     </script>
-
+    
 </body>
 </html>
