@@ -540,6 +540,24 @@
         syncOtherAmount();
     </script>
 
+    <script>
+        const ethnicity = document.getElementById("ethnicity");
+        const ethnicityOther = document.getElementById("ethnicity-other");
+        const ethnicityOtherLabel = document.getElementById("ethnicity-other-label");
+
+        function syncEthnicityOther() {
+            if (!ethnicity || !ethnicityOther || !ethnicityOtherLabel) return;
+
+            const on = ethnicity.value === "other";
+            ethnicityOther.hidden = !on;
+            ethnicityOtherLabel.hidden = !on;
+            ethnicityOther.disabled = !on;
+            ethnicityOther.required = on;
+            if (!on) ethnicityOther.value = "";
+        }
+        ethnicity?.addEventListener("change", syncEthnicityOther);
+        syncEthnicityOther();
+    </script>
 
 </body>
 </html>
