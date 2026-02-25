@@ -78,51 +78,74 @@
     <div class="database-container">
         <h2>Search the FoodX Lite Database ! </h2>
 
-        <!-- Filter Section -->
-        <div class="filter-section">
-            <label for="nutriFilter">Nutriscore:</label>
+<div class="filter-bar">
+
+    <!-- Search -->
+    <div class="filter-search">
+        <input type="text" id="searchInput" placeholder="Search products...">
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+
+        <div class="filter-item">
+            <label for="nutriFilter">Nutriscore</label>
             <select id="nutriFilter">
-                <option value="">All</option>
+                <option value="all" selected>All</option>
                 <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
                 <option value="D">D</option>
                 <option value="E">E</option>
             </select>
+        </div>
 
-            <label for="ecoFilter">Ecoscore:</label>
+        <div class="filter-item">
+            <label for="ecoFilter">Ecoscore</label>
             <select id="ecoFilter">
-                <option value="">All</option>
+                <option value="all" selected>All</option>
                 <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
                 <option value="D">D</option>
                 <option value="E">E</option>
             </select>
+        </div>
 
-            <label for="novaFilter">NOVA Group:</label>
+        <div class="filter-item">
+            <label for="novaFilter">NOVA Group</label>
             <select id="novaFilter">
-                <option value="">All</option>
+                <option value="all" selected>All</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
             </select>
-
-            <label for="superFilter">Supermarket:</label>
-            <select id="superFilter">
-                <option value="">All</option>
-                <option value="Tesco">Tesco</option>
-                <option value="Sainsbury's">Sainsbury's</option>
-                <option value="Waitrose">Waitrose</option>
-                <option value="Morrisons">Morrisons</option>
-            </select>
         </div>
+
+        <div class="filter-item">
+        <label for="brandFilter">Brand</label>
+        <select id="brandFilter">
+            <option value="all" selected>All</option>
+        </select>
+        </div>
+
+        <div class="category-section">
+            <span class="category-title">Categories:</span>
+            <div class="category-filters">
+                <label><input type="checkbox" class="categoryCheck" value="fruit"><span>Fruit</span></label>
+                <label><input type="checkbox" class="categoryCheck" value="vegetables"><span>Vegetables</span></label>
+                <label><input type="checkbox" class="categoryCheck" value="snacks"><span>Snacks</span></label>
+                <label><input type="checkbox" class="categoryCheck" value="drinks"><span>Drinks</span></label>
+            </div>
+        </div>
+
+    </div>
+</div>
 
         <!-- Product Cards -->
         <div class="foodx100-database">
             <p id="items-count">0 items shown</p>
-            <div id="product-container"></div>
             <div id="product-container"></div>
         </div>
 
@@ -140,7 +163,7 @@
         <div class="foodx100-bigger-mission">
             <h2>Switch your plate, fuel the future</h2>
             <p>
-                <span class="bold-text">foodX100</span> is just the beginning. It's a your first taste of the full <span class="bold-text">foodXchange app</span> 
+                <span class="bold-text">foodX100</span> is just the beginning. It's your first taste of the full <span class="bold-text">foodXchange app</span> 
                 <br>experience. Explore smarter grocery choices, compare nutrition,
                 <br>and discover better-for-you foods before anyone else.
                 <br><br>

@@ -12,11 +12,197 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: sans-serif;
+/* ===== MAIN FILTER CONTAINER ===== */
+.filter-bar {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
 }
 
+/* ===== SEARCH ===== */
+.filter-search {
+    margin-bottom: 1.2rem;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.7rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: 0.2s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+/* ===== FILTER SECTION ===== */
+.filter-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+/* ===== EACH FILTER ===== */
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 140px;
+}
+
+.filter-item select {
+  color: #6463639d;
+}
+.filter-item select:invalid {
+  color: #888;
+}
+
+.filter-item label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
+}
+
+.filter-item {
+  position: relative;
+}
+
+.filter-item select {
+  width: 220px; 
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid #e6e6e6;
+  background: #f3f3f3;
+  font-size: 0.95rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+
+.filter-item select:hover {
+    background: #e8e8e8;
+}
+
+.filter-item select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46,125,50,0.15);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .filter-section {
+        flex-direction: column;
+    }
+
+    #searchInput {
+        max-width: 100%;
+    }
+}
+
+/* ===== CATEGORY SECTION ===== */
+.category-section {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.category-title {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.6rem;
+}
+
+/* Pills row */
+.category-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+/* hide checkbox */
+.category-filters input {
+    display: none;
+}
+
+/* make the SPAN the pill */
+.category-filters label {
+    cursor: pointer;
+}
+
+.category-filters label span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.9rem;
+    border-radius: 20px;
+    background: #f3f3f3;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.category-filters label:hover span {
+    background: #e8e8e8;
+}
+
+/* checked = green pill */
+.category-filters input:checked + span {
+    background: #2e7d32;
+    color: #fff;
+}
+
+/* ===== FIX ALINGNMENT===== */
+.category-filters label span {
+    display: inline-block;
+}
+/* Supermarket pills */
+.supermarket-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.supermarket-filters input {
+  display: none;
+}
+
+.supermarket-filters label span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.9rem;
+  border-radius: 20px;
+  background: #f3f3f3;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.supermarket-filters label:hover span {
+  background: #e8e8e8;
+}
+
+.supermarket-filters input:checked + span {
+  background: #2e7d32;
+  color: #fff;
+}
 /* ===== DATABASE SECTION ===== */
 .database-container {
     display: block;
@@ -149,25 +335,6 @@ body {
     cursor: pointer;
 }
 
-/* ===== FILTER SECTION ===== */
-.filter-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.filter-section label {
-    font-weight: 600;
-    margin-right: 5px;
-}
-
-.filter-section select {
-    padding: 5px 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
 
 /* ===== BE PART OF A BIGGER MISSION SECTION ===== */
 .foodx100-bigger-mission {
