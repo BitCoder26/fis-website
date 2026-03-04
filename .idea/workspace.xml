@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c50a1983-5b45-4df8-82f8-644d95a53b62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mysite/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/main/static/getLocation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/main/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/main/templates/map.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/main/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/register/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/register/templates/sign-up.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapfunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/main/static/mapfunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfoodcommunity.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysqlserver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/society-signup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/main/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/main/static/getLocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/main/static/getLocation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/register/templates/sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/register/templates/sign-up.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

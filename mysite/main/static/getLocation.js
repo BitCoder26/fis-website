@@ -10,16 +10,23 @@ document.getElementById('form').addEventListener('submit', (e) => {
 
 
     if (postcode==''||!isValidPostcode(postcode)) {
-        result.innerHTML = "Not a valid Postcode";
+        alert("Not a valid Postcode");
     return;
     }
 
-    fetch('https://nominatim.openstreetmap.org/search?format=json&polygon=1&addressdetails=1&q=' + location)
+    fetch('https://nominatim.openstreetmap.org/search?format=json&polygon=1&addressdetails=1&q=' + postcode)
         .then(response => response.json())
         .then(response => {
+                if (!response || response.length === 0) {
+                    alert("Postcode not found!");
+                    return;
+                }
                 document.getElementById("latitude").value = response[0].lat;
                 document.getElementById("longitude").value = response[0].lon;
                 form.submit();
         });
-
+    .catch(error =>{
+        alert("Error fetching postcode!")
+        console.error(error);
+    })
 });

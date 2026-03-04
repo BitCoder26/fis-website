@@ -13,7 +13,7 @@
     <form method="POST" class="form-group" id="form">
 	    {% csrf_token %}
 	    {{ form|crispy }}
-        #hiding the latitude and longitude so they can be fetched from the given postcode
+        <!--hiding the latitude and longitude so they can be fetched from the given postcode-->
         <input type="hidden" name="latitude" id="latitude">
         <input type="hidden" name="longitude" id="longitude">
 	    <button type="submit" class="btn btn-success">Register</button>
