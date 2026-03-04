@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Food Community{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    {%block add %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        {% block header %}
+        {% endblock %}
+    </header>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="nav">
+            <li><a href="/map/">MyFoodCommunity</a></li>
+            <li><a href="/map/">Contact Us</a></li>
+            <li><a href="/sign-up/">Sign Up</a></li>
+        </ul>
+    </nav>
+    <div id="content" name="content">
+	{% block content %}
+	{% endblock %}
+    </div>
+
+</body>
+</html>

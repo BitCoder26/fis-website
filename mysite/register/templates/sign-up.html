@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block add %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
+
+{% block header %}
+    Sign Up to the MyFoodCommunity Directory
+{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <form method="POST" class="form-group" id="form">
+	    {% csrf_token %}
+	    {{ form|crispy }}
+        #hiding the latitude and longitude so they can be fetched from the given postcode
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
+	    <button type="submit" class="btn btn-success">Register</button>
+    </form>
+    <!--fetching the latitude and longitude to be added to the database-->
+    <script src="{% static 'getLocation.js' %}"></script>
+{% endblock %}
