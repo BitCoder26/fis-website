@@ -534,7 +534,7 @@
     display: flex;
 }
 .phone-screen-box .left-phone-screen {
-    margin-top: 70px;
+    margin-top: 90px;
     margin-bottom: 70px;
     margin-left: 50px;
     width: 470px;
@@ -623,7 +623,7 @@
 ------------------------------------------*/
 .app-features-try {
     margin-bottom: 120px;
-    margin-top: 120px;
+    margin-top: 60px;
 }
 .app-features-try .features-row h2{
     font-family: "Inter", sans-serif;

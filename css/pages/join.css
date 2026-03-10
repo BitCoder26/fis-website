@@ -179,6 +179,7 @@
 /* membership boxes */
 .membership-box {
     display: flex;
+    margin-top: -5px;
     height: 220px;
     padding-left: 40px;
     padding-right: 0px;
@@ -232,8 +233,8 @@
     color: #004000;
 }
 .card-content .bigger-image {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     color: #004000;
 }
 .card-content h1 {
@@ -274,6 +275,28 @@
 .membership-wrapper a:hover .membership-box {
     transform: scale(1.01);
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* ribbon */
+.membership-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.corner-ribbon {
+    position: absolute;
+    top: 30px;
+    right: -50px;
+    width: 200px;
+    background: #ffb300;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 0;
+    transform: rotate(45deg);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0px;
 }
 
 /* ------------------------------------------
