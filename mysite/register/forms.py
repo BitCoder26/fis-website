@@ -13,22 +13,11 @@ class SignupForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ["email", "phone", "password1", "password2", "address", "postcode", "description"]
-
-    def clean(self):
-        cleaned_data = super().clean()
-        email = self.cleaned_data.get("email", "").strip().lower()
-
-        if User.objects.filter(username=email).exists():
-            raise forms.ValidationError("An account with this email already exists.")
-
-        return cleaned_data
+        fields = ["username","email", "phone", "password1", "password2", "address", "postcode", "description"]
 
     def save(self, commit=True):
         user = super().save(commit=False)
         email = self.cleaned_data["email"].strip().lower()
-        user.email = email
-        user.username = email
 
         if commit:
             user.save()

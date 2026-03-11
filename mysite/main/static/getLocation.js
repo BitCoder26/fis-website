@@ -24,7 +24,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
                 document.getElementById("latitude").value = response[0].lat;
                 document.getElementById("longitude").value = response[0].lon;
                 form.submit();
-        });
+        })
     .catch(error =>{
         alert("Error fetching postcode!")
         console.error(error);

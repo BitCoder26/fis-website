@@ -8,6 +8,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
+for (const m of bdata){
+    const marker = L.marker([m.latitude, m.longitude]).addTo(map)
+    marker.bindPopup(
+    m.email + "<br>" + m.phone + "<br>" + m.address + "<br>" + m.postcode + "<br>" + m.description
+    );
+    currentMarkers.push(marker);
+    }
+
 document.getElementById('search').addEventListener('keydown', (e) => {
     if (e.key !== 'Enter') {
         return;

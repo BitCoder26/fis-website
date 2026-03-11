@@ -17,7 +17,6 @@ def signup(request):
             #Creating submitting the business data to the database, lat and lon have been fetched via the js function
             Business.objects.create(
                 user=user,
-                email=form.cleaned_data["email"],
                 phone_number=form.cleaned_data["phone"],
                 address=form.cleaned_data["address"],
                 postcode=form.cleaned_data["postcode"],
